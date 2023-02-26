@@ -1,6 +1,7 @@
 // required frameworks, packages
 
-const express= require("express");
+const express= require("express"),
+    morgan= require("morgan");
 const app= express();
 
 let myTopMovies= [
@@ -65,6 +66,12 @@ let myTopMovies= [
         director: "The Wachowskis"
     }
 ]
+
+// logging woth 'morgan'
+
+// use 'express.static('public'))' to reach the public folder through the port
+
+app.use(express.static('public'));
 
 //GET requests
 app.get('/', (req,res) => {
