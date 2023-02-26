@@ -1,3 +1,5 @@
+// required frameworks, packages
+
 const express= require("express");
 const app= express();
 
@@ -63,3 +65,17 @@ let myTopMovies= [
         director: "The Wachowskis"
     }
 ]
+
+//GET requests
+app.get('/', (req,res) => {
+    res.send('Welcome to my movies API!')
+})
+
+app.get('/movies', (req,res) => {
+    res.json(myTopMovies);
+})
+
+//listen for requests
+app.listen (8080, () => {
+    console.log('Your app is listening on port 8080.')
+});
