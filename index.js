@@ -1,8 +1,13 @@
 // required frameworks, packages
 
 const express= require("express"),
-    morgan= require("morgan");
+    morgan= require("morgan"),
+    fs= require('fs'),
+    path= require('path');
+
 const app= express();
+
+// my movies database
 
 let myTopMovies= [
     {
@@ -67,7 +72,10 @@ let myTopMovies= [
     }
 ]
 
-// logging woth 'morgan'
+
+// logging with 'morgan'
+const accessLogStream= fs.createWriteStream(path.join('./log.txt'), {flags: 'a'});
+app.use(morgan('combined', {stream: accessLogStream}));
 
 // use 'express.static('public'))' to reach the public folder through the port
 
@@ -80,6 +88,12 @@ app.get('/', (req,res) => {
 
 app.get('/movies', (req,res) => {
     res.json(myTopMovies);
+})
+
+//Error handling middleware
+app.use((err, req, res, next) => {
+    console.error(err.stack);
+    res.status(500).send('Something broke!')
 })
 
 //listen for requests
