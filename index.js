@@ -340,8 +340,21 @@ app.get('/', (req,res) => {
     res.send('Welcome to my movies API!')
 })
 
+// READ all movies
 app.get('/movies', (req,res) => {
-    res.json(movies);
+    res.status(200).json(movies);
+})
+
+// READ a specific movie by title
+app.get('/movies/:title', (req,res) => {
+    const { title }= req.params;
+    const movie= movies.find( movie => movie.title=== title);
+
+    if (movie) {
+        res.status(200).json(movie);
+    } else {
+        res.status(400).send('Invalid movie title')
+    }
 })
 
 //Error handling middleware
