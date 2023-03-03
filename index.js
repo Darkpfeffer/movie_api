@@ -3,7 +3,9 @@
 const express= require("express"),
     morgan= require("morgan"),
     fs= require('fs'),
-    path= require('path');
+    path= require('path'),
+    bodyParser= require('body-parser'),
+    uuid= require('uuid');
 
 const app= express();
 
@@ -72,6 +74,8 @@ let myTopMovies= [
     }
 ]
 
+// use of body-parser
+app.use(bodyParser.json());
 
 // logging with 'morgan'
 const accessLogStream= fs.createWriteStream(path.join('./log.txt'), {flags: 'a'});
