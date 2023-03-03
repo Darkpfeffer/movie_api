@@ -45,13 +45,15 @@ let movies= [
             }
         ],
         "releaseDate": "2007",
-        "director": {
+        "director":
+            {
             "name": "Xavier Gens",
             "bio": "He was born in Dunkerque, Nord, France. He is a director and assistant director, known for Frontière(s) (2007), The Divide (2011) and Cell (2016)."+
                 " He has been married to Mounia Meddour since 2005.",
             "birthYear": "1975",
             "deathYear": ""
-        }
+            },
+        "imageURL": "https://m.media-amazon.com/images/M/MV5BMDlmMmZhZjQtZDhlMi00MzU0LWIwYjMtNDRhOGE5YzczYjBmXkEyXkFqcGdeQXVyNDQ2MTMzODA@._V1_.jpg"
     },
     {
         "title": "Inception",
@@ -77,7 +79,8 @@ let movies= [
                     " of filmmaking, Nolan has gone from low-budget independent films to working on some of the biggest blockbusters ever made.",
                 "birthYear": "1970",
                 "deathYear": ""
-            }
+            },
+        "imageURL": "https://de.web.img2.acsta.net/newsv7/19/08/09/19/16/2096534.jpg"
     },
     {
         "title": "Prince of Persia: The Sands of Time",
@@ -103,7 +106,8 @@ let movies= [
                     " for work with David Hare, David Edgar, Hohn, John Osborne, Jack Rosenthal.",
                 "birthYear": "1942",
                 "deathYear": ""
-            }
+            },
+        "imageURL": "https://www.sobrosnetwork.com/wp-content/uploads/2021/04/prince-of-persia-sands-of-time-1200x675-1.png"
     },
     {
         "title": "The Karate Kid",
@@ -131,7 +135,8 @@ let movies= [
                 " deals and started the company Zwart Arbeid A/S",
             "birthYear": "1965",
             "deathYear": ""
-            }
+            },
+        "imageURL": "https://images.moviesanywhere.com/92e403194d518b12a4c5a1e1ee0bb454/5b1c7797-5122-4ee1-98bb-b6ffbcc49ade.jpg"
     },
     {
         "title": "The Lord of the Rings: The Fellowship of the Ring",
@@ -164,7 +169,8 @@ let movies= [
                     " Guild Award, a Producers Guild Award and a New York Film Critics Circle Award.",
                 "birthYear": "1961",
                 "deathYear": ""
-            }
+            },
+        "imageURL": "https://sothebys-md.brightspotcdn.com/69/b5/e7fd127c47e389aab5c566111a69/110.%20LORD%20OF%20THE%20RINGS%20FELLOWSHIP.jpg"
     },
     {
         "title": "The Lord of the Rings: The Two Towers",
@@ -198,7 +204,8 @@ let movies= [
                     " Award, a Producers Guild Award and a New York Film Critics Circle Award.",
                 "birthYear": "1961",
                 "deathYear": ""
-            }
+            },
+        "imageURL": "https://cdn.shopify.com/s/files/1/0037/8008/3782/products/lord_of_the_rings_the_two_towers_NG06275_B-159226.jpg?v=1611688137"
     },
     {
         "title": "The Lord of the Rings: The Return of the King",
@@ -231,7 +238,8 @@ let movies= [
                     " Award, a Producers Guild Award and a New York Film Critics Circle Award.",
                 "birthYear": "1961",
                 "deathYear": ""
-            }
+            },
+        "imageURL": "https://cdn.shopify.com/s/files/1/0037/8008/3782/products/lord_of_the_rings_the_return_of_the_king_advance_JC12594_C_1_2_framed1-451007.jpg?v=1611688139"
     },
     {
         "title": "The Matrix",
@@ -257,7 +265,8 @@ let movies= [
                     " They made their directing debut in 1996 with Bound and achieved fame with their second film, The Matrix (1999).",
                 "birthYear": ["1965", "1967"],
                 "deathYear": ""
-            }
+            },
+        "imageURL": "https://image.tmdb.org/t/p/original/f89U3ADr1oiB1s9GkdPOEpXUk5H.jpg"
     },
     {
         "title": "The Matrix Reloaded",
@@ -283,7 +292,8 @@ let movies= [
                     " They made their directing debut in 1996 with Bound and achieved fame with their second film, The Matrix (1999).",
                 "birthYear": ["1965", "1967"],
                 "deathYear": ""
-            }
+            },
+        "imageURL": "https://e1.pxfuel.com/desktop-wallpaper/1014/2/desktop-wallpaper-the-matrix-reloaded-movie-hq-the-matrix-reloaded-the-matrix-reloaded.jpg"
     },
     {
         "title": "The Notebook",
@@ -312,7 +322,8 @@ let movies= [
                     " of Dramatic Arts in New York.",
                 "birthYear": "1959",
                 "deathYear": ""
-            }
+            },
+        "imageURL": "https://m.media-amazon.com/images/M/MV5BMTk3OTM5Njg5M15BMl5BanBnXkFtZTYwMzA0ODI3._V1_FMjpg_UX1000_.jpg"
     }
 ]
 
