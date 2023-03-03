@@ -30,65 +30,77 @@ let users= [
 let movies= [
     {
         "title": "Hitman",
-        "description": "A gun-for-hire known only as Agent 47 hired by a group known only as 'The Organization' is ensnared in a political conspiracy, which finds him pursued by both Interpol and the Russian military as he treks across Russia and Eastern Europe.",
+        "description": "A gun-for-hire known only as Agent 47 hired by a group known only as 'The Organization' is ensnared in a political conspiracy, which finds him" + 
+            " pursued by both Interpol and the Russian military as he treks across Russia and Eastern Europe.",
         "genre": [
             {
                 "name":"action",
-                "description": "Action films are built around a core set of characteristics: spectacular physical action; a narrative emphasis on fights, chases, and explosions; and a combination of state-of-the-art special effects and stunt-work."
+                "description": "Action films are built around a core set of characteristics: spectacular physical action; a narrative emphasis on fights, chases, and" +
+                    " explosions; and a combination of state-of-the-art special effects and stunt-work."
             },
             {
                 "name": "thriller",
-                "description": "Thriller is a genre of fiction with numerous, often overlapping, subgenres, including crime, horror and detective fiction. Thrillers are characterized and defined by the moods they elicit, giving their audiences heightened feelings of suspense, excitement, surprise, anticipation and anxiety."
+                "description": "Thriller is a genre of fiction with numerous, often overlapping, subgenres, including crime, horror and detective fiction. Thrillers are" +
+                    " characterized and defined by the moods they elicit, giving their audiences heightened feelings of suspense, excitement, surprise, anticipation and anxiety."
             }
         ],
         "releaseDate": "2007",
         "director": {
             "name": "Xavier Gens",
-            "bio": "He was born in Dunkerque, Nord, France. He is a director and assistant director, known for Frontière(s) (2007), The Divide (2011) and Cell (2016). He has been married to Mounia Meddour since 2005.",
+            "bio": "He was born in Dunkerque, Nord, France. He is a director and assistant director, known for Frontière(s) (2007), The Divide (2011) and Cell (2016)."+
+                " He has been married to Mounia Meddour since 2005.",
             "birthYear": "1975",
             "deathYear": ""
         }
     },
     {
         "title": "Inception",
-        "description": "A thief who steals corporate secrets through the use of dream-sharing technology is given the inverse task of planting an idea into the mind of a C.E.O., but his tragic past may doom the project and his team to disaster.",
+        "description": "A thief who steals corporate secrets through the use of dream-sharing technology is given the inverse task of planting an idea into the mind of a C.E.O.,"+
+            " but his tragic past may doom the project and his team to disaster.",
         "genre": [
             {
                 "name":"action",
-                "description": "Action films are built around a core set of characteristics: spectacular physical action; a narrative emphasis on fights, chases, and explosions; and a combination of state-of-the-art special effects and stunt-work."
+                "description": "Action films are built around a core set of characteristics: spectacular physical action; a narrative emphasis on fights, chases, and explosions;"+
+                    " and a combination of state-of-the-art special effects and stunt-work."
             }, 
             {
                 "name": "science fiction",
-                "description": "Science fiction is a genre of fiction in which the stories often tell about science and technology of the future. It is important to note that science fiction has a relationship with the principles of science—these stories involve partially true- partially fictitious laws or theories of science."
+                "description": "Science fiction is a genre of fiction in which the stories often tell about science and technology of the future. It is important to note that"+
+                    " science fiction has a relationship with the principles of science—these stories involve partially true- partially fictitious laws or theories of science."
             }
         ],
         "releaseDate": "2010",
         "director": 
             {
                 "name": "Christopher Nolan",
-                "bio": "He is best known for his cerebral, often nonlinear, storytelling, acclaimed writer-director was born in London, England. Over the course of 15 years of filmmaking, Nolan has gone from low-budget independent films to working on some of the biggest blockbusters ever made.",
+                "bio": "He is best known for his cerebral, often nonlinear, storytelling, acclaimed writer-director was born in London, England. Over the course of 15 years"+
+                    " of filmmaking, Nolan has gone from low-budget independent films to working on some of the biggest blockbusters ever made.",
                 "birthYear": "1970",
                 "deathYear": ""
             }
     },
     {
         "title": "Prince of Persia: The Sands of Time",
-        "description": "A young fugitive prince and princess must stop a villain who unknowingly threatens to destroy the world with a special dagger that enables the magic sand inside to reverse time.",
+        "description": "A young fugitive prince and princess must stop a villain who unknowingly threatens to destroy the world with a special dagger that enables the magic"+
+            " sand inside to reverse time.",
         "genre": [
             {
                 "name":"action",
-                "description": "Action films are built around a core set of characteristics: spectacular physical action; a narrative emphasis on fights, chases, and explosions; and a combination of state-of-the-art special effects and stunt-work."
+                "description": "Action films are built around a core set of characteristics: spectacular physical action; a narrative emphasis on fights, chases, and explosions;"+
+                    " and a combination of state-of-the-art special effects and stunt-work."
             }, 
             {
                 "name": "fantasy",
-                "description": "By definition, fantasy is a genre that typically features the use of magic or other supernatural phenomena in the plot, setting, or theme. Magical or mythological creatures often feature, as well as races other than humans, such as elves, dwarves, or goblins."
+                "description": "By definition, fantasy is a genre that typically features the use of magic or other supernatural phenomena in the plot, setting, or theme."+
+                    " Magical or mythological creatures often feature, as well as races other than humans, such as elves, dwarves, or goblins."
             }
         ],
         "releaseDate": "2010",
         "director": 
             {
                 "name": "Mike Newell",
-                "bio": "Three year training course at Granada Television, with intention of going into theatre. Graduated to directing TV plays, building strong reputation for work with David Hare, David Edgar, Hohn, John Osborne, Jack Rosenthal.",
+                "bio": "Three year training course at Granada Television, with intention of going into theatre. Graduated to directing TV plays, building strong reputation"+
+                    " for work with David Hare, David Edgar, Hohn, John Osborne, Jack Rosenthal.",
                 "birthYear": "1942",
                 "deathYear": ""
             }
@@ -99,18 +111,24 @@ let movies= [
         "genre": [
             {
                 "name": "drama",
-                "description": "A drama is a type of narrative writing that is meant to be performed in front of an audience. Dramas are most notably performed as plays in a theatre though many dramas have been recreated and adapted for film, TV, or radio."
+                "description": "A drama is a type of narrative writing that is meant to be performed in front of an audience. Dramas are most notably performed as plays in a"+
+                    " theatre though many dramas have been recreated and adapted for film, TV, or radio."
             },
             { 
                 "name": "martial arts",
-                "description": "Martial arts films commonly include hand-to-hand combat along with other types of action, such as stuntwork, chases, and gunfights. Sub-genres of martial arts films include kung fu films, wuxia, karate films, and martial arts action comedy films, while related genres include gun fu, jidaigeki and samurai films."
+                "description": "Martial arts films commonly include hand-to-hand combat along with other types of action, such as stuntwork, chases, and gunfights."+
+                    " Sub-genres of martial arts films include kung fu films, wuxia, karate films, and martial arts action comedy films, while related genres include"+
+                    " gun fu, jidaigeki and samurai films."
             }
         ],
         "releaseDate": "2010",
         "director": 
             {
             "name": "Harald Zwart",
-            "bio": "Harald Zwart was born in Leiden, Netherlands, and his family moved to Norway where he grew up. He made his first film when he was 8 years and was active with Super8 and stop motion animation for years. He was accepted into the highly acclaimed Dutch Film Academy in Amsterdam, NL, where he spent 4 years, specializing in Directing, Script and Editing. He met his wife and partner Veslemoey Ruud Zwart and they've worked together since. She started managing his deals and started the company Zwart Arbeid A/S",
+            "bio": "Harald Zwart was born in Leiden, Netherlands, and his family moved to Norway where he grew up. He made his first film when he was 8 years and was active"+
+                " with Super8 and stop motion animation for years. He was accepted into the highly acclaimed Dutch Film Academy in Amsterdam, NL, where he spent 4 years,"+
+                " specializing in Directing, Script and Editing. He met his wife and partner Veslemoey Ruud Zwart and they've worked together since. She started managing his"+
+                " deals and started the company Zwart Arbeid A/S",
             "birthYear": "1965",
             "deathYear": ""
             }
@@ -121,48 +139,63 @@ let movies= [
         "genre": [
             {
                 "name": "adventure",
-                "description": "The adventure genre consists of books where the protagonist goes on an epic journey, either personally or geographically. Often the protagonist has a mission and faces many obstacles in his way."
+                "description": "The adventure genre consists of books where the protagonist goes on an epic journey, either personally or geographically. Often the protagonist"+
+                    " has a mission and faces many obstacles in his way."
             }, 
             {
                 "name": "epic",
-                "description": "Epic is a genre of narrative defined by heroic or legendary adventures presented in a long format. Originating in the form of epic poetry, the genre also now applies to epic theatre, epic films, music, novels, stage play, television series, and video games."
+                "description": "Epic is a genre of narrative defined by heroic or legendary adventures presented in a long format. Originating in the form of epic poetry, the"+
+                    " genre also now applies to epic theatre, epic films, music, novels, stage play, television series, and video games."
             },
             {
                 "name": "fantasy",
-                "description": "By definition, fantasy is a genre that typically features the use of magic or other supernatural phenomena in the plot, setting, or theme. Magical or mythological creatures often feature, as well as races other than humans, such as elves, dwarves, or goblins."
+                "description": "By definition, fantasy is a genre that typically features the use of magic or other supernatural phenomena in the plot, setting, or theme."+
+                    " Magical or mythological creatures often feature, as well as races other than humans, such as elves, dwarves, or goblins."
             }
         ],
         "releaseDate": "2001",
         "director": 
             {
                 "name": "Sir Peter Jackson",
-                "bio": "He made history with The Lord of the Rings trilogy, becoming the first person to direct three major feature films simultaneously. The Fellowship of the Ring, The Two Towers and The Return of the King were nominated for and collected a slew of awards from around the globe, with The Return of the King receiving his most impressive collection of awards. This included three Academy Awards® (Best Adapted Screenplay, Best Director and Best Picture), two Golden Globes (Best Director and Best Motion Picture-Drama), three BAFTAs (Best Adapted Screenplay, Best Film and Viewers' Choice), a Directors Guild Award, a Producers Guild Award and a New York Film Critics Circle Award.",
+                "bio": "He made history with The Lord of the Rings trilogy, becoming the first person to direct three major feature films simultaneously. The Fellowship of the"+
+                    " Ring, The Two Towers and The Return of the King were nominated for and collected a slew of awards from around the globe, with The Return of the King"+
+                    " receiving his most impressive collection of awards. This included three Academy Awards® (Best Adapted Screenplay, Best Director and Best Picture),"+
+                    " two Golden Globes (Best Director and Best Motion Picture-Drama), three BAFTAs (Best Adapted Screenplay, Best Film and Viewers' Choice), a Directors"+
+                    " Guild Award, a Producers Guild Award and a New York Film Critics Circle Award.",
                 "birthYear": "1961",
                 "deathYear": ""
             }
     },
     {
         "title": "The Lord of the Rings: The Two Towers",
-        "description": "While Frodo and Sam edge closer to Mordor with the help of the shifty Gollum, the divided fellowship makes a stand against Sauron's new ally, Saruman, and his hordes of Isengard.",
+        "description": "While Frodo and Sam edge closer to Mordor with the help of the shifty Gollum, the divided fellowship makes a stand against Sauron's new ally,"+
+            " Saruman, and his hordes of Isengard.",
         "genre": [
             {
                 "name": "adventure",
-                "description": "The adventure genre consists of books where the protagonist goes on an epic journey, either personally or geographically. Often the protagonist has a mission and faces many obstacles in his way."
+                "description": "The adventure genre consists of books where the protagonist goes on an epic journey, either personally or geographically. Often the protagonist"+
+                    " has a mission and faces many obstacles in his way."
             }, 
             {
                 "name": "epic",
-                "description": "Epic is a genre of narrative defined by heroic or legendary adventures presented in a long format. Originating in the form of epic poetry, the genre also now applies to epic theatre, epic films, music, novels, stage play, television series, and video games."
+                "description": "Epic is a genre of narrative defined by heroic or legendary adventures presented in a long format. Originating in the form of epic poetry,"+
+                    " the genre also now applies to epic theatre, epic films, music, novels, stage play, television series, and video games."
             },
             {
                 "name": "fantasy",
-                "description": "By definition, fantasy is a genre that typically features the use of magic or other supernatural phenomena in the plot, setting, or theme. Magical or mythological creatures often feature, as well as races other than humans, such as elves, dwarves, or goblins."
+                "description": "By definition, fantasy is a genre that typically features the use of magic or other supernatural phenomena in the plot, setting, or theme."+
+                    " Magical or mythological creatures often feature, as well as races other than humans, such as elves, dwarves, or goblins."
             }
         ],
         "releaseDate": "2002",
         "director": 
             {
                 "name": "Sir Peter Jackson",
-                "bio": "He made history with The Lord of the Rings trilogy, becoming the first person to direct three major feature films simultaneously. The Fellowship of the Ring, The Two Towers and The Return of the King were nominated for and collected a slew of awards from around the globe, with The Return of the King receiving his most impressive collection of awards. This included three Academy Awards® (Best Adapted Screenplay, Best Director and Best Picture), two Golden Globes (Best Director and Best Motion Picture-Drama), three BAFTAs (Best Adapted Screenplay, Best Film and Viewers' Choice), a Directors Guild Award, a Producers Guild Award and a New York Film Critics Circle Award.",
+                "bio": "He made history with The Lord of the Rings trilogy, becoming the first person to direct three major feature films simultaneously. The Fellowship"+
+                    " of the Ring, The Two Towers and The Return of the King were nominated for and collected a slew of awards from around the globe, with The Return of the"+
+                    " King receiving his most impressive collection of awards. This included three Academy Awards® (Best Adapted Screenplay, Best Director and Best Picture),"+
+                    " two Golden Globes (Best Director and Best Motion Picture-Drama), three BAFTAs (Best Adapted Screenplay, Best Film and Viewers' Choice), a Directors Guild"+
+                    " Award, a Producers Guild Award and a New York Film Critics Circle Award.",
                 "birthYear": "1961",
                 "deathYear": ""
             }
@@ -173,88 +206,110 @@ let movies= [
         "genre": [
             {
                 "name": "adventure",
-                "description": "The adventure genre consists of books where the protagonist goes on an epic journey, either personally or geographically. Often the protagonist has a mission and faces many obstacles in his way."
+                "description": "The adventure genre consists of books where the protagonist goes on an epic journey, either personally or geographically. Often the protagonist"+
+                    " has a mission and faces many obstacles in his way."
             }, 
             {
                 "name": "epic",
-                "description": "Epic is a genre of narrative defined by heroic or legendary adventures presented in a long format. Originating in the form of epic poetry, the genre also now applies to epic theatre, epic films, music, novels, stage play, television series, and video games."
+                "description": "Epic is a genre of narrative defined by heroic or legendary adventures presented in a long format. Originating in the form of epic poetry,"+
+                    " the genre also now applies to epic theatre, epic films, music, novels, stage play, television series, and video games."
             },
             {
                 "name": "fantasy",
-                "description": "By definition, fantasy is a genre that typically features the use of magic or other supernatural phenomena in the plot, setting, or theme. Magical or mythological creatures often feature, as well as races other than humans, such as elves, dwarves, or goblins."
+                "description": "By definition, fantasy is a genre that typically features the use of magic or other supernatural phenomena in the plot, setting, or theme."+
+                    " Magical or mythological creatures often feature, as well as races other than humans, such as elves, dwarves, or goblins."
             }
         ],
         "releaseDate": "2003",
         "director": 
             {
                 "name": "Sir Peter Jackson",
-                "bio": "He made history with The Lord of the Rings trilogy, becoming the first person to direct three major feature films simultaneously. The Fellowship of the Ring, The Two Towers and The Return of the King were nominated for and collected a slew of awards from around the globe, with The Return of the King receiving his most impressive collection of awards. This included three Academy Awards® (Best Adapted Screenplay, Best Director and Best Picture), two Golden Globes (Best Director and Best Motion Picture-Drama), three BAFTAs (Best Adapted Screenplay, Best Film and Viewers' Choice), a Directors Guild Award, a Producers Guild Award and a New York Film Critics Circle Award.",
+                "bio": "He made history with The Lord of the Rings trilogy, becoming the first person to direct three major feature films simultaneously. The Fellowship of the"+
+                    " Ring, The Two Towers and The Return of the King were nominated for and collected a slew of awards from around the globe, with The Return of the King"+
+                    " receiving his most impressive collection of awards. This included three Academy Awards® (Best Adapted Screenplay, Best Director and Best Picture), two"+
+                    " Golden Globes (Best Director and Best Motion Picture-Drama), three BAFTAs (Best Adapted Screenplay, Best Film and Viewers' Choice), a Directors Guild"+
+                    " Award, a Producers Guild Award and a New York Film Critics Circle Award.",
                 "birthYear": "1961",
                 "deathYear": ""
             }
     },
     {
         "title": "The Matrix",
-        "description": "When a beautiful stranger leads computer hacker Neo to a forbidding underworld, he discovers the shocking truth--the life he knows is the elaborate deception of an evil cyber-intelligence.",
+        "description": "When a beautiful stranger leads computer hacker Neo to a forbidding underworld, he discovers the shocking truth--the life he knows is the elaborate"+
+            " deception of an evil cyber-intelligence.",
         "genre": [
             {
                 "name":"action",
-                "description": "Action films are built around a core set of characteristics: spectacular physical action; a narrative emphasis on fights, chases, and explosions; and a combination of state-of-the-art special effects and stunt-work."
+                "description": "Action films are built around a core set of characteristics: spectacular physical action; a narrative emphasis on fights, chases, and explosions;"+
+                    " and a combination of state-of-the-art special effects and stunt-work."
             },
             {
                 "name": "science fiction",
-                "description": "Science fiction is a genre of fiction in which the stories often tell about science and technology of the future. It is important to note that science fiction has a relationship with the principles of science—these stories involve partially true- partially fictitious laws or theories of science."
+                "description": "Science fiction is a genre of fiction in which the stories often tell about science and technology of the future. It is important to note that"+
+                    " science fiction has a relationship with the principles of science—these stories involve partially true- partially fictitious laws or theories of science."
             }
         ],
         "releaseDate": "1999",
         "director": 
             {
                 "name": "The Wachowskis",
-                "bio": "They are American film and television directors, writers and producers. have worked as a writing and directing team through most of their careers. They made their directing debut in 1996 with Bound and achieved fame with their second film, The Matrix (1999).",
+                "bio": "They are American film and television directors, writers and producers. have worked as a writing and directing team through most of their careers."+
+                    " They made their directing debut in 1996 with Bound and achieved fame with their second film, The Matrix (1999).",
                 "birthYear": ["1965", "1967"],
                 "deathYear": ""
             }
     },
     {
         "title": "The Matrix Reloaded",
-        "description": "Freedom fighters Neo, Trinity and Morpheus continue to lead the revolt against the Machine Army, unleashing their arsenal of extraordinary skills and weaponry against the systematic forces of repression and exploitation.",
+        "description": "Freedom fighters Neo, Trinity and Morpheus continue to lead the revolt against the Machine Army, unleashing their arsenal of extraordinary skills and"+
+            " weaponry against the systematic forces of repression and exploitation.",
         "genre": [
             {
                 "name":"action",
-                "description": "Action films are built around a core set of characteristics: spectacular physical action; a narrative emphasis on fights, chases, and explosions; and a combination of state-of-the-art special effects and stunt-work."
+                "description": "Action films are built around a core set of characteristics: spectacular physical action; a narrative emphasis on fights, chases, and explosions;"+
+                    " and a combination of state-of-the-art special effects and stunt-work."
             },
             {
                 "name": "science fiction",
-                "description": "Science fiction is a genre of fiction in which the stories often tell about science and technology of the future. It is important to note that science fiction has a relationship with the principles of science—these stories involve partially true- partially fictitious laws or theories of science."
+                "description": "Science fiction is a genre of fiction in which the stories often tell about science and technology of the future. It is important to note that"+
+                    " science fiction has a relationship with the principles of science—these stories involve partially true- partially fictitious laws or theories of science."
             }
         ],
         "releaseDate": "2003",
         "director": 
             {
                 "name": "The Wachowskis",
-                "bio": "They are American film and television directors, writers and producers. have worked as a writing and directing team through most of their careers. They made their directing debut in 1996 with Bound and achieved fame with their second film, The Matrix (1999).",
+                "bio": "They are American film and television directors, writers and producers. have worked as a writing and directing team through most of their careers."+
+                    " They made their directing debut in 1996 with Bound and achieved fame with their second film, The Matrix (1999).",
                 "birthYear": ["1965", "1967"],
                 "deathYear": ""
             }
     },
     {
         "title": "The Notebook",
-        "description": "A poor yet passionate young man falls in love with a rich young woman, giving her a sense of freedom, but they are soon separated because of their social differences.",
+        "description": "A poor yet passionate young man falls in love with a rich young woman, giving her a sense of freedom, but they are soon separated because of their social"+
+            " differences.",
         "genre": [
             {
                 "name": "drama",
-                "description": "A drama is a type of narrative writing that is meant to be performed in front of an audience. Dramas are most notably performed as plays in a theatre though many dramas have been recreated and adapted for film, TV, or radio."
+                "description": "A drama is a type of narrative writing that is meant to be performed in front of an audience. Dramas are most notably performed as plays in a"+
+                    " theatre though many dramas have been recreated and adapted for film, TV, or radio."
             },
             { 
                 "name": "romantic",
-                "description": "A romance novel or romantic novel generally refers to a type of genre fiction novel which places its primary focus on the relationship and romantic love between two people, and usually has an emotionally satisfying and optimistic ending."
+                "description": "A romance novel or romantic novel generally refers to a type of genre fiction novel which places its primary focus on the relationship and"+
+                    " romantic love between two people, and usually has an emotionally satisfying and optimistic ending."
             }
         ],
         "releaseDate": "2004",
         "director": 
             {
                 "name": "Nick Cassavetes",
-                "bio": "He was born in New York City, the son of actress Gena Rowlands and Greek-American actor and film director John Cassavetes. As a child, he appeared in two of his father's films: Husbands (1970) and A Woman Under the Influence (1974). After spending so much of his youth surrounded by the film industry, Cassavetes initially decided he did not want to go into the field. He instead attended Syracuse University on a basketball scholarship. His athletic career was effectively ended by an injury, and he decided to rethink his aspirations, ultimately deciding to attend his parents' alma mater, the American Academy of Dramatic Arts in New York.",
+                "bio": "He was born in New York City, the son of actress Gena Rowlands and Greek-American actor and film director John Cassavetes. As a child, he appeared in"+
+                    " two of his father's films: Husbands (1970) and A Woman Under the Influence (1974). After spending so much of his youth surrounded by the film industry,"+
+                    " Cassavetes initially decided he did not want to go into the field. He instead attended Syracuse University on a basketball scholarship. His athletic career"+
+                    " was effectively ended by an injury, and he decided to rethink his aspirations, ultimately deciding to attend his parents' alma mater, the American Academy"+
+                    " of Dramatic Arts in New York.",
                 "birthYear": "1959",
                 "deathYear": ""
             }
