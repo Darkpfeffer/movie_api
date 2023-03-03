@@ -14,76 +14,66 @@ app.use(bodyParser.json());
 
 // my movies database
 
-let myTopMovies= [
+let movies= [
     {
-        position: "1st",
-        title: "The Lord of the Rings: The Fellowship of the Ring",
-        genre: ["adventure", "epic", "fantasy"],
-        releaseDate: "2001",
-        director: "Peter Jackson"
-    },
-    {
-        position: "2nd",
-        title: "The Lord of the Rings: The Two Towers",
-        genre: ["adventure", "epic", "fantasy"],
-        releaseDate: "2002",
-        director: "Peter Jackson"
-    },
-    {
-        position: "3rd",
-        title: "The Lord of the Rings: The Return of the King",
-        genre: ["adventure", "epic", "fantasy"],
-        releaseDate: "2003",
-        director: "Peter Jackson"
-    },
-    {
-        position: "4th",
-        title: "The Matrix",
-        genre: ["action", "science fiction"],
-        releaseDate: "1999",
-        director: "The Wachowskis"
-    },
-    {
-        position: "5th",
-        title: "The Karate Kid",
-        genre: ["drama", "martial arts"],
-        releaseDate: "2010",
-        director: "Harald Zwart"
-    },
-    {
-        position: "6th",
-        title: "The Notebook",
-        genre: ["drama", "romantic"],
-        releaseDate: "2004",
-        director: "Nick Cassavetes"
-    },
-    {
-        position: "7th",
-        title: "Prince of Persia: The Sands of Time",
-        genre: ["action", "fantasy"],
-        releaseDate: "2010",
-        director: "Mike Newell"
-    },
-    {
-        position: "8th",
-        title: "Inception",
-        genre: ["action", "science fiction"],
-        releaseDate: "2010",
-        director: "Christopher Nolan"
-    },
-    {
-        position: "9th",
         title: "Hitman",
         genre: ["action", "thriller"],
         releaseDate: "2007",
         director: "Xavier Gens"
     },
     {
-        position: "10th",
+        title: "Inception",
+        genre: ["action", "science fiction"],
+        releaseDate: "2010",
+        director: "Christopher Nolan"
+    },
+    {
+        title: "Prince of Persia: The Sands of Time",
+        genre: ["action", "fantasy"],
+        releaseDate: "2010",
+        director: "Mike Newell"
+    },
+    {
+        title: "The Karate Kid",
+        genre: ["drama", "martial arts"],
+        releaseDate: "2010",
+        director: "Harald Zwart"
+    },
+    {
+        title: "The Lord of the Rings: The Fellowship of the Ring",
+        genre: ["adventure", "epic", "fantasy"],
+        releaseDate: "2001",
+        director: "Peter Jackson"
+    },
+    {
+        title: "The Lord of the Rings: The Two Towers",
+        genre: ["adventure", "epic", "fantasy"],
+        releaseDate: "2002",
+        director: "Peter Jackson"
+    },
+    {
+        title: "The Lord of the Rings: The Return of the King",
+        genre: ["adventure", "epic", "fantasy"],
+        releaseDate: "2003",
+        director: "Peter Jackson"
+    },
+    {
+        title: "The Matrix",
+        genre: ["action", "science fiction"],
+        releaseDate: "1999",
+        director: "The Wachowskis"
+    },
+    {
         title: "The Matrix Reloaded",
         genre: ["action", "science fiction"],
         releaseDate: "2003",
         director: "The Wachowskis"
+    },
+    {
+        title: "The Notebook",
+        genre: ["drama", "romantic"],
+        releaseDate: "2004",
+        director: "Nick Cassavetes"
     }
 ]
 
@@ -101,7 +91,7 @@ app.get('/', (req,res) => {
 })
 
 app.get('/movies', (req,res) => {
-    res.json(myTopMovies);
+    res.json(movies);
 })
 
 //Error handling middleware
