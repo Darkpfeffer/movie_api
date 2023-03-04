@@ -275,7 +275,7 @@ app.post('/users', (req, res) => {
     }
 })
 
-// Add a movie to the users list of favorites
+// Add a movie to the users favorite list
 app.post('/users/:id/:movieTitle', (req, res) => {
     const{ id, movieTitle}= req.params;
 

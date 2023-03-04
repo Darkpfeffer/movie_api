@@ -6,20 +6,41 @@
     <body>
         <div>
             <h1>Documentation page</h1>
+                <p>Welcome to my movie-API documentation! The main functionalities of the API
+                    (use 'ctrl+F' to search for them):<br>
+                    'CRATE', 'READ', 'UPDATE', 'DELETE'
+                </p>
                 <h3>CREATE</h3>
                     <h4>Add a user</h4>
                         <p>
+                            Description: This will add a new user to the users array.<br>
                             Endpoint URL: '/users'<br>
                             Method type: 'POST'<br>
                             Format of data expected in the body of the request: 'JSON'<br>
                             Format of the response data: 'JSON'<br>
                             <br>
-                            Example request:<br>
+                            Example request body:<br>
                             { "name": "Mary", "favoriteMovies": [] }<br>
                             <br>
                             Example response:<br>
                             { "name": "Mary", "favoriteMovies": [],
                              "id": "1ee0a9c2-b399-4a6f-ba0a-3d4f2641e989" }
+                        </p>
+                    <h4>Add a movie to the users favorite list</h4>
+                        <p>
+                            Description: This will add a movie title to the users favorite list.
+                            Endpoint URL: '/users/:id/:movieTitle'<br>
+                            ':id' must be replaced with the ID of the user.<br>
+                            ':movieTitle' must be replaced with the title of the movie<br>
+                            <br>
+                            Method type: 'POST'<br>
+                            Format of the response data: Text
+                            <br>
+                            Example request URL:<br>
+                            http://localhost:8080/users/1/Hitman<br>
+                            <br>
+                            Example response:<br>
+                            Hitman has been added to user 1's favorite list
                         </p>
         </div>
     </body>
