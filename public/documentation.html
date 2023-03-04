@@ -37,7 +37,7 @@
                             Format of the response data: Text
                             <br>
                             Example request URL:<br>
-                            http://localhost:8080/users/1/Hitman<br>
+                            '/users/1/Hitman'<br>
                             <br>
                             Example response:<br>
                             Hitman has been added to user 1's favorite list
@@ -80,6 +80,36 @@
                                 },
                                 ...
                             ]
+                        </p>
+                    <h4>Get a specific movie by title</h4>
+                        <p>
+                            Description: This will return a specific movie by the title
+                             written in the URL.
+                            Endpoint URL: '/movies/:title'<br>
+                            ':title' must be repaced with the title of the movie.<br>
+                            Method type: 'GET'<br>
+                            Format of the response data: 'JSON'<br>
+                            <br>
+                            Example request URL:<br>
+                            '/movies/Inception'<br>
+                            <br>
+                            Example response:<br>
+                            {
+                                "title": "Inception",
+                                "description": "A thief who steals corporate secrets through the use of dream-sharing technology is given the inverse task of planting an idea into the mind of a C.E.O., but his tragic past may doom the project and his team to disaster.",
+                                "genre": {
+                                    "name": "action",
+                                    "description": "Action films are built around a core set of characteristics: spectacular physical action; a narrative emphasis on fights, chases, and explosions; and a combination of state-of-the-art special effects and stunt-work."
+                                },
+                                "releaseDate": "2010",
+                                "director": {
+                                    "name": "Christopher Nolan",
+                                    "bio": "He is best known for his cerebral, often nonlinear, storytelling, acclaimed writer-director was born in London, England. Over the course of 15 years of filmmaking, Nolan has gone from low-budget independent films to working on some of the biggest blockbusters ever made.",
+                                    "birthYear": "1970",
+                                    "deathYear": ""
+                                },
+                                "imageURL": "https://de.web.img2.acsta.net/newsv7/19/08/09/19/16/2096534.jpg"
+                            }
                         </p>
         </div>
     </body>
