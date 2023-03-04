@@ -13,7 +13,7 @@
                 <h3>CREATE</h3>
                     <h4>Add a user</h4>
                         <p>
-                            Description: This will add a new user to the users array.<br>
+                            Description: This will add a new user to the user's array.<br>
                             Endpoint URL: '/users'<br>
                             Method type: 'POST'<br>
                             Format of data expected in the body of the request: 'JSON'<br>
@@ -26,9 +26,9 @@
                             { "name": "Mary", "favoriteMovies": [],
                              "id": "1ee0a9c2-b399-4a6f-ba0a-3d4f2641e989" }
                         </p>
-                    <h4>Add a movie to the users favorite list</h4>
+                    <h4>Add a movie to the user's favorite list</h4>
                         <p>
-                            Description: This will add a movie title to the users favorite list.
+                            Description: This will add a movie title to the user's favorite list.
                             Endpoint URL: '/users/:id/:movieTitle'<br>
                             ':id' must be replaced with the ID of the user.<br>
                             ':movieTitle' must be replaced with the title of the movie<br>
@@ -171,6 +171,22 @@
                                     "Hitman"
                                 ]
                             }
+                        </p>
+                <h3>DELETE</h3>
+                    <h4>Remove movie from user's favorite list</h4>
+                        <p>
+                            Description: This will allow the user to remove a movie title
+                             from the favorite list.<br>
+                            Endpoint URL: '/users/:id/:movieTitle'<br>
+                            ':id' must be replaced with the user's ID.<br>
+                            ':movieTitle' must be replaced with the title of the movie.<br>
+                            Method type: 'DELETE'<br>
+                            Format of the response data: Text<br>
+                            <br>
+                            Example request URL endpoint: '/users/2/Inception'<br>
+                            <br>
+                            Example response:<br>
+                            Inception has been removed from user 2's array
                         </p>
         </div>
     </body>
