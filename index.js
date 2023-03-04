@@ -283,7 +283,7 @@ app.post('/users/:id/:movieTitle', (req, res) => {
 
     if ( user) {
         user.favoriteMovies.push(movieTitle);
-        res.status(200).json(`${movieTitle} has been added to use ${id}'s array`);
+        res.status(200).json(`${movieTitle} has been added to user ${id}'s array`);
     } else{
         res.status(400).send('User not found')
     }
@@ -351,6 +351,22 @@ app.put('/users/:id', (req, res) => {
     if ( user) {
         user.name= updatedUser.name;
         res.status(200).json(user);
+    } else{
+        res.status(400).send('User not found')
+    }
+})
+
+//DELETE
+
+// Allow users to remove a movie from their list of favorites
+app.delete('/users/:id/:movieTitle', (req, res) => {
+    const{ id, movieTitle}= req.params;
+
+    let user= users.find( user=> user.id== id);
+
+    if ( user) {
+        user.favoriteMovies = user.favoriteMovies.filter( title=> title!== movieTitle)
+        res.status(200).json(`${movieTitle} has been removed from user ${id}'s array`);
     } else{
         res.status(400).send('User not found')
     }
