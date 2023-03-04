@@ -282,7 +282,7 @@ app.get('/movies/:title', (req,res) => {
     }
 })
 
-// READ data abour a genre by name
+// READ data about a genre by name
 app.get('/movies/genre/:genreName', (req, res) => {
     const{ genreName}= req.params;
     
@@ -293,7 +293,20 @@ app.get('/movies/genre/:genreName', (req, res) => {
     }else {
         res.status(400).send('Invalid genre')
     }    
-})      
+})
+
+// READ data about a director by name
+app.get('/movies/directors/:directorName', (req, res) => {
+    const{ directorName}= req.params;
+    
+    const director= movies.find( movie=> movie.director.name=== directorName).director;
+    
+    if(director) {
+        res.status(200).json(director);
+    }else {
+        res.status(400).send('Invalid director')
+    }    
+})
 
 //Error handling middleware
 app.use((err, req, res, next) => {
