@@ -357,6 +357,19 @@ app.get('/movies/:title', (req,res) => {
     }
 })
 
+// READ data abour a genre by name
+app.get('/movies/genre/:genreName', (req, res) => {
+    const{ genreName}= req.params;
+    
+    const genre= movies.find( movie=> movie.genre.name=== genreName).genre;
+    
+    if(genre) {
+        res.status(200).json(genre);
+    }else {
+        res.status(400).send('Invalid genre')
+    }    
+})      
+
 //Error handling middleware
 app.use((err, req, res, next) => {
     console.error(err.stack);
