@@ -36,7 +36,7 @@
                             Method type: 'POST'<br>
                             Format of the response data: Text
                             <br>
-                            Example request URL:<br>
+                            Example request URL endpoint:<br>
                             '/users/1/Hitman'<br>
                             <br>
                             Example response:<br>
@@ -90,7 +90,7 @@
                             Method type: 'GET'<br>
                             Format of the response data: 'JSON'<br>
                             <br>
-                            Example request URL:<br>
+                            Example request URL endpoint:<br>
                             '/movies/Inception'<br>
                             <br>
                             Example response:<br>
@@ -109,6 +109,41 @@
                                     "deathYear": ""
                                 },
                                 "imageURL": "https://de.web.img2.acsta.net/newsv7/19/08/09/19/16/2096534.jpg"
+                            }
+                        </p>
+                    <h4>Get data about a genre by name</h4>
+                        <p>
+                            Description: This will return the name a description of the
+                             specific genre<br>
+                            Endpoint URL: '/movies/genre/:genreName'<br>
+                            ':genreName' must be replaced with the name of the genre.<br>
+                            Method type: 'GET'<br>
+                            Format of the response data: 'JSON'<br>
+                            <br>
+                            Example request URL endpoint: '/movies/genre/action'<br>
+                            <br>
+                            Example response:<br>
+                            {
+                                "name": "action",
+                                "description": "Action films are built around a core set of characteristics: spectacular physical action; a narrative emphasis on fights, chases, and explosions; and a combination of state-of-the-art special effects and stunt-work."
+                            }
+                        </p>
+                    <h4>Get data of a director by name</h4>
+                        <p>
+                            Description: This will return data about the specific director
+                             written in the URL.<br>
+                            Endpoint URL: '/movies/directors/:directorName'<br>
+                            ':directorName' must be replaced with the full name of the director.
+                            Method type: 'GET'<br>
+                            Format of the response data: 'JSON'<br>
+                            <br>
+                            Example request URL endpoint: '/movies/directors/Nick%20Cassavetes'<br> 
+                            Example response:<br>
+                            {
+                                "name": "Nick Cassavetes",
+                                "bio": "He was born in New York City, the son of actress Gena Rowlands and Greek-American actor and film director John Cassavetes. As a child, he appeared in two of his father's films: Husbands (1970) and A Woman Under the Influence (1974). After spending so much of his youth surrounded by the film industry, Cassavetes initially decided he did not want to go into the field. He instead attended Syracuse University on a basketball scholarship. His athletic career was effectively ended by an injury, and he decided to rethink his aspirations, ultimately deciding to attend his parents' alma mater, the American Academy of Dramatic Arts in New York.",
+                                "birthYear": "1959",
+                                "deathYear": ""
                             }
                         </p>
         </div>
