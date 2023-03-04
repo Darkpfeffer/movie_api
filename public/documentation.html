@@ -42,6 +42,45 @@
                             Example response:<br>
                             Hitman has been added to user 1's favorite list
                         </p>
+                <h3>READ</h3>
+                    <h4>Main page</h4>
+                        <p>
+                            Description: This will take the user to the main page<br>
+                            Endpoint URL: '/'<br>
+                            Method type: 'GET'<br>
+                            Format of the response data: Text<br>
+                            <br>
+                            Example response:<br>
+                            Welcome to my movies API!
+                        </p>
+                    <h4>Get the list of all movies</h4>
+                        <p>
+                            Description: This will return all the movies with all information
+                            from the in-memory database<br>
+                            Endpoint URL: '/movies'<br>
+                            Method type: 'GET'<br>
+                            Format of the response data: 'JSON'<br>
+                            <br>
+                            Example response:<br>
+                            [
+                                {
+                                    "title": "Hitman",
+                                    "description": "A gun-for-hire known only as Agent 47 hired by a group known only as 'The Organization' is ensnared in a political conspiracy, which finds him pursued by both Interpol and the Russian military as he treks across Russia and Eastern Europe.",
+                                    "genre": {
+                                        "name": "action",
+                                        "description": "Action films are built around a core set of characteristics: spectacular physical action; a narrative emphasis on fights, chases, and explosions; and a combination of state-of-the-art special effects and stunt-work."
+                                        },
+                                    "releaseDate": "2007",
+                                    "director": {
+                                        "name": "Xavier Gens",
+                                        "bio": "He was born in Dunkerque, Nord, France. He is a director and assistant director, known for Frontière(s) (2007), The Divide (2011) and Cell (2016). He has been married to Mounia Meddour since 2005.",
+                                        "birthYear": "1975",
+                                        "deathYear": ""
+                                    },
+                                },
+                                ...
+                            ]
+                        </p>
         </div>
     </body>
 </html>
