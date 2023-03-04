@@ -283,7 +283,7 @@ app.post('/users/:id/:movieTitle', (req, res) => {
 
     if ( user) {
         user.favoriteMovies.push(movieTitle);
-        res.status(200).send(`${movieTitle} has been added to user ${id}'s array`);
+        res.status(200).send(`${movieTitle} has been added to user ${id}'s favorite list`);
     } else{
         res.status(400).send('User not found')
     }
