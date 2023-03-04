@@ -260,7 +260,24 @@ app.use(morgan('combined', {stream: accessLogStream}));
 
 app.use(express.static('public'));
 
-//GET requests
+//CREATE
+
+//Add a user
+app.post('/users', (req, res) => {
+    const newUser= req.body;
+
+    if (newUser.name) {
+        newUser.id= uuid.v4();
+        users.push(newUser);
+        res.status(201).json(newUser)
+    } else {
+        res.status(400).send('Username required')
+    }
+})
+
+//READ
+
+//Main page
 app.get('/', (req,res) => {
     res.send('Welcome to my movies API!')
 })
@@ -272,10 +289,10 @@ app.get('/movies', (req,res) => {
 
 // READ a specific movie by title
 app.get('/movies/:title', (req,res) => {
-    const { title }= req.params;
+    const { title}= req.params;
     const movie= movies.find( movie => movie.title=== title);
 
-    if (movie) {
+    if ( movie) {
         res.status(200).json(movie);
     } else {
         res.status(400).send('Invalid movie title')
@@ -288,7 +305,7 @@ app.get('/movies/genre/:genreName', (req, res) => {
     
     const genre= movies.find( movie=> movie.genre.name=== genreName).genre;
     
-    if(genre) {
+    if( genre) {
         res.status(200).json(genre);
     }else {
         res.status(400).send('Invalid genre')
@@ -306,6 +323,23 @@ app.get('/movies/directors/:directorName', (req, res) => {
     }else {
         res.status(400).send('Invalid director')
     }    
+})
+
+// UPDATE
+
+// Allow users to change username
+app.put('/users/:id', (req, res) => {
+    const{ id}= req.params;
+    const updatedUser= req.body;
+
+    let user= users.find( user=> user.id== id);
+
+    if ( user) {
+        user.name= updatedUser.name;
+        res.status(200).json(user);
+    } else{
+        res.status(400).send('User not found')
+    }
 })
 
 //Error handling middleware
