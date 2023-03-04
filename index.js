@@ -32,18 +32,12 @@ let movies= [
         "title": "Hitman",
         "description": "A gun-for-hire known only as Agent 47 hired by a group known only as 'The Organization' is ensnared in a political conspiracy, which finds him" + 
             " pursued by both Interpol and the Russian military as he treks across Russia and Eastern Europe.",
-        "genre": [
+        "genre":
             {
                 "name":"action",
                 "description": "Action films are built around a core set of characteristics: spectacular physical action; a narrative emphasis on fights, chases, and" +
                     " explosions; and a combination of state-of-the-art special effects and stunt-work."
             },
-            {
-                "name": "thriller",
-                "description": "Thriller is a genre of fiction with numerous, often overlapping, subgenres, including crime, horror and detective fiction. Thrillers are" +
-                    " characterized and defined by the moods they elicit, giving their audiences heightened feelings of suspense, excitement, surprise, anticipation and anxiety."
-            }
-        ],
         "releaseDate": "2007",
         "director":
             {
@@ -59,18 +53,12 @@ let movies= [
         "title": "Inception",
         "description": "A thief who steals corporate secrets through the use of dream-sharing technology is given the inverse task of planting an idea into the mind of a C.E.O.,"+
             " but his tragic past may doom the project and his team to disaster.",
-        "genre": [
+        "genre":
             {
                 "name":"action",
                 "description": "Action films are built around a core set of characteristics: spectacular physical action; a narrative emphasis on fights, chases, and explosions;"+
                     " and a combination of state-of-the-art special effects and stunt-work."
-            }, 
-            {
-                "name": "science fiction",
-                "description": "Science fiction is a genre of fiction in which the stories often tell about science and technology of the future. It is important to note that"+
-                    " science fiction has a relationship with the principles of science—these stories involve partially true- partially fictitious laws or theories of science."
-            }
-        ],
+            },
         "releaseDate": "2010",
         "director": 
             {
@@ -86,18 +74,12 @@ let movies= [
         "title": "Prince of Persia: The Sands of Time",
         "description": "A young fugitive prince and princess must stop a villain who unknowingly threatens to destroy the world with a special dagger that enables the magic"+
             " sand inside to reverse time.",
-        "genre": [
+        "genre":
             {
                 "name":"action",
                 "description": "Action films are built around a core set of characteristics: spectacular physical action; a narrative emphasis on fights, chases, and explosions;"+
                     " and a combination of state-of-the-art special effects and stunt-work."
-            }, 
-            {
-                "name": "fantasy",
-                "description": "By definition, fantasy is a genre that typically features the use of magic or other supernatural phenomena in the plot, setting, or theme."+
-                    " Magical or mythological creatures often feature, as well as races other than humans, such as elves, dwarves, or goblins."
-            }
-        ],
+            },
         "releaseDate": "2010",
         "director": 
             {
@@ -112,19 +94,13 @@ let movies= [
     {
         "title": "The Karate Kid",
         "description": "Work causes a single mother to move to China with her young son; in his new home, the boy embraces kung fu, taught to him by a master.",
-        "genre": [
-            {
-                "name": "drama",
-                "description": "A drama is a type of narrative writing that is meant to be performed in front of an audience. Dramas are most notably performed as plays in a"+
-                    " theatre though many dramas have been recreated and adapted for film, TV, or radio."
-            },
+        "genre":
             { 
                 "name": "martial arts",
                 "description": "Martial arts films commonly include hand-to-hand combat along with other types of action, such as stuntwork, chases, and gunfights."+
                     " Sub-genres of martial arts films include kung fu films, wuxia, karate films, and martial arts action comedy films, while related genres include"+
                     " gun fu, jidaigeki and samurai films."
-            }
-        ],
+            },
         "releaseDate": "2010",
         "director": 
             {
@@ -141,23 +117,12 @@ let movies= [
     {
         "title": "The Lord of the Rings: The Fellowship of the Ring",
         "description": "A meek Hobbit from the Shire and eight companions set out on a journey to destroy the powerful One Ring and save Middle-earth from the Dark Lord Sauron.",
-        "genre": [
-            {
-                "name": "adventure",
-                "description": "The adventure genre consists of books where the protagonist goes on an epic journey, either personally or geographically. Often the protagonist"+
-                    " has a mission and faces many obstacles in his way."
-            }, 
-            {
-                "name": "epic",
-                "description": "Epic is a genre of narrative defined by heroic or legendary adventures presented in a long format. Originating in the form of epic poetry, the"+
-                    " genre also now applies to epic theatre, epic films, music, novels, stage play, television series, and video games."
-            },
+        "genre":
             {
                 "name": "fantasy",
                 "description": "By definition, fantasy is a genre that typically features the use of magic or other supernatural phenomena in the plot, setting, or theme."+
                     " Magical or mythological creatures often feature, as well as races other than humans, such as elves, dwarves, or goblins."
-            }
-        ],
+            },
         "releaseDate": "2001",
         "director": 
             {
@@ -176,23 +141,12 @@ let movies= [
         "title": "The Lord of the Rings: The Two Towers",
         "description": "While Frodo and Sam edge closer to Mordor with the help of the shifty Gollum, the divided fellowship makes a stand against Sauron's new ally,"+
             " Saruman, and his hordes of Isengard.",
-        "genre": [
-            {
-                "name": "adventure",
-                "description": "The adventure genre consists of books where the protagonist goes on an epic journey, either personally or geographically. Often the protagonist"+
-                    " has a mission and faces many obstacles in his way."
-            }, 
-            {
-                "name": "epic",
-                "description": "Epic is a genre of narrative defined by heroic or legendary adventures presented in a long format. Originating in the form of epic poetry,"+
-                    " the genre also now applies to epic theatre, epic films, music, novels, stage play, television series, and video games."
-            },
+        "genre":
             {
                 "name": "fantasy",
                 "description": "By definition, fantasy is a genre that typically features the use of magic or other supernatural phenomena in the plot, setting, or theme."+
                     " Magical or mythological creatures often feature, as well as races other than humans, such as elves, dwarves, or goblins."
-            }
-        ],
+            },
         "releaseDate": "2002",
         "director": 
             {
@@ -210,23 +164,12 @@ let movies= [
     {
         "title": "The Lord of the Rings: The Return of the King",
         "description": "Gandalf and Aragorn lead the World of Men against Sauron's army to draw his gaze from Frodo and Sam as they approach Mount Doom with the One Ring.",
-        "genre": [
-            {
-                "name": "adventure",
-                "description": "The adventure genre consists of books where the protagonist goes on an epic journey, either personally or geographically. Often the protagonist"+
-                    " has a mission and faces many obstacles in his way."
-            }, 
-            {
-                "name": "epic",
-                "description": "Epic is a genre of narrative defined by heroic or legendary adventures presented in a long format. Originating in the form of epic poetry,"+
-                    " the genre also now applies to epic theatre, epic films, music, novels, stage play, television series, and video games."
-            },
+        "genre":
             {
                 "name": "fantasy",
                 "description": "By definition, fantasy is a genre that typically features the use of magic or other supernatural phenomena in the plot, setting, or theme."+
                     " Magical or mythological creatures often feature, as well as races other than humans, such as elves, dwarves, or goblins."
-            }
-        ],
+            },
         "releaseDate": "2003",
         "director": 
             {
@@ -245,18 +188,12 @@ let movies= [
         "title": "The Matrix",
         "description": "When a beautiful stranger leads computer hacker Neo to a forbidding underworld, he discovers the shocking truth--the life he knows is the elaborate"+
             " deception of an evil cyber-intelligence.",
-        "genre": [
-            {
-                "name":"action",
-                "description": "Action films are built around a core set of characteristics: spectacular physical action; a narrative emphasis on fights, chases, and explosions;"+
-                    " and a combination of state-of-the-art special effects and stunt-work."
-            },
+        "genre":
             {
                 "name": "science fiction",
                 "description": "Science fiction is a genre of fiction in which the stories often tell about science and technology of the future. It is important to note that"+
                     " science fiction has a relationship with the principles of science—these stories involve partially true- partially fictitious laws or theories of science."
-            }
-        ],
+            },
         "releaseDate": "1999",
         "director": 
             {
@@ -272,18 +209,12 @@ let movies= [
         "title": "The Matrix Reloaded",
         "description": "Freedom fighters Neo, Trinity and Morpheus continue to lead the revolt against the Machine Army, unleashing their arsenal of extraordinary skills and"+
             " weaponry against the systematic forces of repression and exploitation.",
-        "genre": [
-            {
-                "name":"action",
-                "description": "Action films are built around a core set of characteristics: spectacular physical action; a narrative emphasis on fights, chases, and explosions;"+
-                    " and a combination of state-of-the-art special effects and stunt-work."
-            },
+        "genre":
             {
                 "name": "science fiction",
                 "description": "Science fiction is a genre of fiction in which the stories often tell about science and technology of the future. It is important to note that"+
                     " science fiction has a relationship with the principles of science—these stories involve partially true- partially fictitious laws or theories of science."
-            }
-        ],
+            },
         "releaseDate": "2003",
         "director": 
             {
@@ -299,18 +230,12 @@ let movies= [
         "title": "The Notebook",
         "description": "A poor yet passionate young man falls in love with a rich young woman, giving her a sense of freedom, but they are soon separated because of their social"+
             " differences.",
-        "genre": [
-            {
-                "name": "drama",
-                "description": "A drama is a type of narrative writing that is meant to be performed in front of an audience. Dramas are most notably performed as plays in a"+
-                    " theatre though many dramas have been recreated and adapted for film, TV, or radio."
-            },
+        "genre":
             { 
                 "name": "romantic",
                 "description": "A romance novel or romantic novel generally refers to a type of genre fiction novel which places its primary focus on the relationship and"+
                     " romantic love between two people, and usually has an emotionally satisfying and optimistic ending."
-            }
-        ],
+            },
         "releaseDate": "2004",
         "director": 
             {
