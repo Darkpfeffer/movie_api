@@ -9,6 +9,13 @@ const express= require("express"),
 
 const app= express();
 
+// add Schemas to the API
+const mongoose= require('mongoose');
+const Models= require('./models.js');
+
+const Movies= Models.Movie;
+const Users= Models.User;
+
 // use of body-parser
 app.use(bodyParser.json());
 
