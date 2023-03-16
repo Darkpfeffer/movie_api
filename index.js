@@ -5,7 +5,8 @@ const express= require("express"),
     fs= require('fs'),
     path= require('path'),
     bodyParser= require('body-parser'),
-    uuid= require('uuid');
+    uuid= require('uuid'),
+    mongoose= require('mongoose');
 
 const app= express();
 
@@ -14,13 +15,12 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: true}));
 
 // add Schemas to the API
-const mongoose= require('mongoose');
 const Models= require('./models.js');
 
 const Movies= Models.Movie;
 const Users= Models.User;
 
-mongoose.connect('mongodb://localhost:27017/moviedbnosql', {useNewUrlParser: true, useUnifiedTopology: true});
+mongoose.connect('mongodb://127.0.0.1:27017/moviedbnosql', {useNewUrlParser: true, useUnifiedTopology: true})
 
 // my movies database (Descriptions and director bio is used from IMDB)
 
@@ -280,12 +280,13 @@ app.use(express.static('public'));
     Password: String,
     Email: String,
     Birthday: Date
+
 } */
 app.post('/users', (req, res) => {
     Users.findOne({ Username: req.body.Username})
         .then((user) => {
             if(user) {
-                return res.status(400).send(req.body.Username + 'already exists');
+                return res.status(400).send(req.body.Username + ' already exists');
             }else {
                 Users
                     .create({
