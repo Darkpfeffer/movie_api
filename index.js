@@ -24,7 +24,7 @@ mongoose.connect('mongodb://localhost:27017/moviedbnosql', {useNewUrlParser: tru
 
 // my movies database (Descriptions and director bio is used from IMDB)
 
-let users= [
+/* let users= [
     {
         id: 1,
         name: "Kim",
@@ -260,7 +260,7 @@ let movies= [
             },
         "imageURL": "https://m.media-amazon.com/images/M/MV5BMTk3OTM5Njg5M15BMl5BanBnXkFtZTYwMzA0ODI3._V1_FMjpg_UX1000_.jpg"
     }
-]
+] */
 
 // logging with 'morgan'
 const accessLogStream= fs.createWriteStream(path.join('./log.txt'), {flags: 'a'});
