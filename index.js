@@ -9,6 +9,10 @@ const express= require("express"),
 
 const app= express();
 
+// use of body-parser
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({extended: true}));
+
 // add Schemas to the API
 const mongoose= require('mongoose');
 const Models= require('./models.js');
@@ -17,9 +21,6 @@ const Movies= Models.Movie;
 const Users= Models.User;
 
 mongoose.connect('mongodb://localhost:27017/moviedbnosql', {useNewUrlParser: true, useUnifiedTopology: true});
-
-// use of body-parser
-app.use(bodyParser.json());
 
 // my movies database (Descriptions and director bio is used from IMDB)
 
