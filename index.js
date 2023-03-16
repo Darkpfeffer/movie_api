@@ -347,7 +347,16 @@ app.get('/users', (req, res) => {
 });
 
 //READ a specific user by username
-app.get('/users/:Username')
+app.get('/users/:Username', (req, res) => {
+    Users.findOne({Username: req.params.Username })
+        .then((user) => {
+            res.json(user);
+        })
+        .catch((err) => {
+            console.error(err);
+            res.status(500).send('Error: '+ err);
+        });
+});
 
 // READ a specific movie by title
 app.get('/movies/:title', (req,res) => {
