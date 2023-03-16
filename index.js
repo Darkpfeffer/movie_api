@@ -346,6 +346,9 @@ app.get('/users', (req, res) => {
         });
 });
 
+//READ a specific user by username
+app.get('/users/:Username')
+
 // READ a specific movie by title
 app.get('/movies/:title', (req,res) => {
     const { title}= req.params;

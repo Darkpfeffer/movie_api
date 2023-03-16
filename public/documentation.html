@@ -20,11 +20,23 @@
                             Format of the response data: 'JSON'<br>
                             <br>
                             Example request body:<br>
-                            { "name": "Mary", "favoriteMovies": [] }<br>
+                            {<br>
+                                "Username": "Mary",<br>
+                                "Password": "example456!"<br>
+                                "Email": "mary@example.com"<br>
+                                "Birtday": "2001-10-24"<br>
+                            }
                             <br>
                             Example response:<br>
-                            { "name": "Mary", "favoriteMovies": [],
-                             "id": "1ee0a9c2-b399-4a6f-ba0a-3d4f2641e989" }
+                            {
+                                "Username": "Mary2",
+                                "Password": "example456!",
+                                "Email": "mary@example.com",
+                                "Birthday": "2001-10-24T00:00:00.000Z",
+                                "FavoriteMovies": [],
+                                "_id": "64130ea893504592c757550f",
+                                "__v": 0
+                            }
                         </p>
                     <h4>Add a movie to the user's favorite list</h4>
                         <p>
@@ -56,7 +68,7 @@
                     <h4>Get the list of all movies</h4>
                         <p>
                             Description: This will return all the movies with all information
-                            from the in-memory database<br>
+                            from the external database<br>
                             Endpoint URL: '/movies'<br>
                             Method type: 'GET'<br>
                             Format of the response data: 'JSON'<br>
@@ -80,6 +92,26 @@
                                 },
                                 ...
                             ]
+                        </p>
+                    <h4>Get the list of all users</h4>
+                        <p>
+                            Description: This will return all the movies with all information
+                            from the external database<br>
+                            Endpoint URL: '/users'<br>
+                            Method type: 'GET'<br>
+                            Format of the response data: 'JSON'<br>
+                            <br>
+                            Example response:<br>
+                            {
+                                "_id": "641309dbd3d6abe814c76a1c",
+                                "Username": "Mary",
+                                "Password": "example456!",
+                                "Email": "mary@example.com",
+                                "Birthday": "2001-10-24T00:00:00.000Z",
+                                "FavoriteMovies": [],
+                                "__v": 0
+                            }
+                            ...
                         </p>
                     <h4>Get a specific movie by title</h4>
                         <p>
