@@ -5,16 +5,17 @@ let movieSchema= mongoose.Schema({
     Title: {type: String, required: true},
     Description: {type: String, required: true},
     Genre: {
-        Name: String,
-        Description: String
+        Name: {type: String, required: true},
+        Description: {type: String, required: true}
     },
     Director: {
-        Name: String,
-        Bio: String
+        Name: {type: String, required: true},
+        Bio: {type: String, required: true},
+        Birthyear: {type: Number, required: true},
+        Deathyear: Number
     },
     Actors: [String],
-    ImagePath: String,
-    Featured: Boolean
+    ImagePath: {type: String, required: true}
 });
 
 // Schema for users
