@@ -126,10 +126,12 @@ app.get('/movies/:title', (req,res) => {
 app.get('/movies/genre/:genreName', (req, res) => {
     const{ genreName}= req.params;
     
-    const genre= movies.find( movie=> movie.genre.name=== genreName).genre;
+    const genreByName= Movies.find({"Genre.Name": genreName});
     
-    if( genre) {
-        res.status(200).json(genre);
+    if( genreByName) {
+        genreByName.then((genreInfo) => {
+        res.status(200).json(genreInfo[0].Genre);
+        })
     }else {
         res.status(400).send('Invalid genre')
     }    
