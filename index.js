@@ -111,10 +111,12 @@ app.get('/movies', (req,res) => {
 // READ a specific movie by title
 app.get('/movies/:title', (req,res) => {
     const { title}= req.params;
-    const movie= movies.find( movie => movie.title=== title);
+    const movie= Movies.find({Title: title});
 
     if ( movie) {
-        res.status(200).json(movie);
+        movie.then((specificMovie) => {
+            res.status(200).json(specificMovie)
+        })
     } else {
         res.status(400).send('Invalid movie title')
     }

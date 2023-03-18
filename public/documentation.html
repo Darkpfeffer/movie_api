@@ -113,63 +113,25 @@
                             '/movies/Inception'<br>
                             <br>
                             Example response:<br>
-                            {
-                                "title": "Inception",
-                                "description": "A thief who steals corporate secrets through the use of dream-sharing technology is given the inverse task of planting an idea into the mind of a C.E.O., but his tragic past may doom the project and his team to disaster.",
-                                "genre": {
-                                    "name": "action",
-                                    "description": "Action films are built around a core set of characteristics: spectacular physical action; a narrative emphasis on fights, chases, and explosions; and a combination of state-of-the-art special effects and stunt-work."
-                                },
-                                "releaseDate": "2010",
-                                "director": {
-                                    "name": "Christopher Nolan",
-                                    "bio": "He is best known for his cerebral, often nonlinear, storytelling, acclaimed writer-director was born in London, England. Over the course of 15 years of filmmaking, Nolan has gone from low-budget independent films to working on some of the biggest blockbusters ever made.",
-                                    "birthYear": "1970",
-                                    "deathYear": ""
-                                },
-                                "imageURL": "https://de.web.img2.acsta.net/newsv7/19/08/09/19/16/2096534.jpg"
-                            }
-                        </p>
-                    <h4>Get the list of all users</h4>
-                        <p>
-                            Description: This will return all the users with all information
-                            from the external database<br>
-                            Endpoint URL: '/users'<br>
-                            Method type: 'GET'<br>
-                            Format of the response data: 'JSON'<br>
-                            <br>
-                            Example response:<br>
-                            {<br>
-                                "_id": "641309dbd3d6abe814c76a1c",<br>
-                                "Username": "Mary",<br>
-                                "Password": "example456!",<br>
-                                "Email": "mary@example.com",<br>
-                                "Birthday": "2001-10-24T00:00:00.000Z",<br>
-                                "FavoriteMovies": [],<br>
-                                "__v": 0<br>
-                            }<br>
-                            ...<br>
-                        </p>
-                    <h4>Get a user by username</h4>
-                        <p>
-                            Description: This will return a specific user by username<br>
-                            Endpoint URL: '/users/:Username'<br>
-                            :Username must be replaced with an actual username.<br>
-                            Method type: 'GET'<br>
-                            Format og the response data: 'JSON'<br>
-                            <br>
-                            Example URL: '/users/Mary'<br>
-                            <br>
-                            Example response:<br>
-                            {<br>
-                                "_id": "641309dbd3d6abe814c76a1c",<br>
-                                "Username": "Mary",<br>
-                                "Password": "example456!",<br>
-                                "Email": "mary@example.com",<br>
-                                "Birthday": "2001-10-24T00:00:00.000Z",<br>
-                                "FavoriteMovies": [],<br>
-                                "__v": 0<br>
-                            }
+                            [
+                                {
+                                    "Genre": {
+                                        "Name": "Action",
+                                        "Description": "Action films are built around a core set of characteristics: spectacular physical action; a narrative emphasis on fights, chases, and explosions; and a combination of state-of-the-art special effects and stunt-work."
+                                    },
+                                    "Director": {
+                                        "Name": "Christopher Nolan",
+                                        "Bio": "He is best known for his cerebral, often nonlinear, storytelling, acclaimed writer-director was born in London, England. Over the course of 15 years of filmmaking, Nolan has gone from low-budget independent films to working on some of the biggest blockbusters ever made.",
+                                        "Birthyear": 1970
+                                    },
+                                    "Actors": [],
+                                    "_id": "640c6890274958af87029bd7",
+                                    "Title": "Inception",
+                                    "Description": "A thief who steals corporate secrets through the use of dream-sharing technology is given the inverse task of planting an idea into the mind of a C.E.O but his tragic past may doom the project and his team to disaster.",
+                                    "Release_date": "2010",
+                                    "ImageURL": "https://de.web.img2.acsta.net/newsv7/19/08/09/19/16/2096534.jpg"
+                                }
+                            ]
                         </p>
                     <h4>Get data about a genre by name</h4>
                         <p>
