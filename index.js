@@ -36,10 +36,10 @@ app.use(express.static('public'));
 /* Expected JSON format
 {
     (ID: Will be automatically generated)
-    Username: String,
-    Password: String,
-    Email: String,
-    Birthday: Date
+    Username: String, (required)
+    Password: String, (required)
+    Email: String, (required)
+    Birthday: Date (required)
 
 } */
 app.post('/users', (req, res) => {
@@ -69,18 +69,29 @@ app.post('/users', (req, res) => {
 });
 
 // Add a movie to the users favorite list
-app.post('/users/:id/:movieTitle', (req, res) => {
-    const{ id, movieTitle}= req.params;
+app.post('/users/:userId/movies/:movieId', (req, res) => {
+    const{ userId, movieId}= req.params;
 
-    let user= users.find( user=> user.id== id);
+    let user= Users.findOne({_id: userId });
+    let movie= Movies.findOne({_id: movieId });
 
-    if ( user) {
-        user.favoriteMovies.push(movieTitle);
-        res.status(200).send(`${movieTitle} has been added to user ${id}'s favorite list`);
-    } else{
-        res.status(400).send('User not found')
+    if (!user) {
+        res.status(400).send('User not found');
+    } else if (!movie) {
+        res.status(400).send('Movie not found')
+    } else {
+            Users.findOneAndUpdate({_id: req.params.userId},{
+           $addToSet: {
+            FavoriteMovies: req.params.movieId
+            }
+        }).then( (user) => {
+            res.status(200).json({Username: user.Username, FavoriteMovies: user.FavoriteMovies});
+        }).catch((err) => {
+            console.error(err);
+            res.status(500).send('Error: '+ err)
+        });
     }
-})
+});
 
 //READ
 
@@ -91,7 +102,10 @@ app.get('/', (req,res) => {
 
 // READ all movies
 app.get('/movies', (req,res) => {
-    res.status(200).json(movies);
+    Movies.find()
+        .then((movies) => {
+            res.status(200).json(movies)
+        });
 })
 
 // READ all users
