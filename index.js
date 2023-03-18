@@ -154,19 +154,35 @@ app.get('/movies/directors/:directorName', (req, res) => {
 
 // UPDATE
 
-// Allow users to change username
-app.put('/users/:id', (req, res) => {
-    const{ id}= req.params;
-    const updatedUser= req.body;
+// Allow users to update user info by ID
+/* Expected format in the request body:
+{
+    Username: String,
+    (required)
+    Password: String,
+    (required)
+    Email: String,
+    (required)
+    Birthday: Date
+    (required)
+} */
+app.put('/users/:Username', (req, res) => {
 
-    let user= users.find( user=> user.id== id);
-
-    if ( user) {
-        user.name= updatedUser.name;
-        res.status(200).json(user);
-    } else{
-        res.status(400).send('User not found')
-    }
+    Users.findOneAndUpdate({Username: req.params.Username })
+        .then( { $set:
+            {
+                Username: req.body.Username,
+                Password: req.body.Password,
+                Email: req.body.Email,
+                Birthday: req.body.Birthday
+            }
+        }).then((updatedUser) => {
+                res.status(200).json(updatedUser)
+        }).catch((err) => {
+            if(err) {
+                res.status(400).send('User couldn\'t be updated: ' + err)
+            } 
+        })
 })
 
 //DELETE
