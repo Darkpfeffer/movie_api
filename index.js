@@ -141,10 +141,12 @@ app.get('/movies/genre/:genreName', (req, res) => {
 app.get('/movies/directors/:directorName', (req, res) => {
     const{ directorName}= req.params;
     
-    const director= movies.find( movie=> movie.director.name=== directorName).director;
+    const directorByName= Movies.find({"Director.Name": directorName});
     
-    if(director) {
-        res.status(200).json(director);
+    if(directorByName) {
+        directorByName.then((directorInfo) => {
+            res.status(200).json(directorInfo[0].Director);
+            });
     }else {
         res.status(400).send('Invalid director')
     }    
