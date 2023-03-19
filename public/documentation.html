@@ -170,30 +170,34 @@
                             }
                         </p>
                 <h3>UPDATE</h3>
-                    <h4>Change username</h4>
+                    <h4>Update user info by name</h4>
                         <p>
-                            Description: This will allow the user to change their username.<br>
-                            Endpoint URL: '/users/:id'<br>
-                            ':id' must be replaced with the ID of the user<br>
+                            Description: This will allow the user to change their user information.<br>
+                            Endpoint URL: '/users/:Username'<br>
+                            ':Username' must be replaced with the username of the user<br>
                             <br>
                             Method type: 'PUT'<br>
                             Format of data expected in the body of the request: 'JSON'<br>
                             Format of the response data: 'JSON'<br>
                             <br>
-                            Example request URL endpoint:'/users/1'<br>
+                            Example request URL endpoint:'/users/Mary'<br>
                             <br>
                             Example request body:<br>
-                            {
-                                "name":"Kim updated name"
+                            {<br>
+                                "Username": "Mary",<br>
+                                "Password": "example456!",<br>
+                                "Email": "mary@example.com",<br>
+                                "Birthday": "2001-10-24"<br>
                             }<br>
                             <br>
                             Example response:<br>
                             {
-                                "id": 1,
-                                "name": "Kim updated name",
-                                "favoriteMovies": [
-                                    "Hitman"
-                                ]
+                                _id: ObjectId("641309dbd3d6abe814c76a1c"),
+                                Username: 'Mary',
+                                Password: 'example456!',
+                                Email: 'mary@example.com',
+                                Birthday: ISODate("2001-10-24T00:00:00.000Z"),
+                                FavoriteMovies: []
                             }
                         </p>
                 <h3>DELETE</h3>
@@ -201,17 +205,23 @@
                         <p>
                             Description: This will allow the user to remove a movie title
                              from the favorite list.<br>
-                            Endpoint URL: '/users/:id/:movieTitle'<br>
-                            ':id' must be replaced with the user's ID.<br>
-                            ':movieTitle' must be replaced with the title of the movie.<br>
+                            Endpoint URL: '/users/:userId/movies/:movieId'<br>
+                            ':userId' must be replaced with the user's ID.<br>
+                            ':movieId' must be replaced with the ID of the movie.<br>
                             <br>
-                            Method type: 'DELETE'<br>
-                            Format of the response data: Text<br>
+                            Method type: 'PUT'<br>
+                            Format of the response data: 'JSON'<br>
                             <br>
-                            Example request URL endpoint: '/users/2/Inception'<br>
+                            Example request URL endpoint: '/users/640c78738b910ed1587f7778/movies/640c72cf274958af87029bdf'<br>
                             <br>
                             Example response:<br>
-                            Inception has been removed from user 2's array
+                            {
+                                "Username": "randomuser",
+                                "FavoriteMovies": [
+                                    "640c6890274958af87029bd7",
+                                    "640c7209274958af87029bde",
+                                ]
+                            }
                         </p>
                     <h4>Deregister from the site</h4>
                         <p>
