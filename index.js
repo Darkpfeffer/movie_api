@@ -216,14 +216,15 @@ app.put('/users/:userId/movies/:movieId', (req, res) => {
 app.delete('/users/:id', (req, res) => {
     const{ id}= req.params;
 
-    let user= users.find( user=> user.id== id);
+    let user= Users.find({_id: id});
 
-    if ( user) {
-        users = users.filter( user=> user.id!= id)
+    Users.findOneAndRemove({_id: id}).then(user => {
+        if ( user) {
         res.status(200).send(`user ${id} has been deleted`);
-    } else{
+        } else{
         res.status(400).send('User not found')
-    }
+        }
+    })
 })
 
 //Error handling middleware
