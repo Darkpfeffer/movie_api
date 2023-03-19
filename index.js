@@ -14,6 +14,13 @@ const app= express();
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: true}));
 
+// import auth.js file
+let auth= require('./auth')(app); //This ensures that Express is available in "auth.js"
+
+//import Passport
+const passport= require('passport');
+require('./passport;')
+
 // add Schemas to the API
 const Models= require('./models.js');
 
