@@ -19,7 +19,7 @@ let auth= require('./auth')(app); //This ensures that Express is available in "a
 
 //import Passport
 const passport= require('passport');
-require('./passport;')
+require('./passport');
 
 // add Schemas to the API
 const Models= require('./models.js');
@@ -110,7 +110,7 @@ app.get('/', (req,res) => {
 })
 
 // READ all movies
-app.get('/movies', (req,res) => {
+app.get('/movies', passport.authenticate('jwt', {session: false }), (req,res) => {
     Movies.find()
         .then((movies) => {
             res.status(200).json(movies)
