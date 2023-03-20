@@ -92,7 +92,7 @@ app.post('/users/:userId/movies/:movieId', (req, res) => {
                 FavoriteMovies: req.params.movieId
             },
         },
-        {new: true}) //Returns updated object,/*
+        {new: true}) //Returns updated object /*
         .then( (updatedUser) => {
             res.status(200).json({Username: updatedUser.Username, FavoriteMovies: updatedUser.FavoriteMovies});
         }).catch((err) => {
