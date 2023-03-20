@@ -14,12 +14,12 @@ const app= express();
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: true}));
 
-// import auth.js file
+/* // import auth.js file
 let auth= require('./auth')(app); //This ensures that Express is available in "auth.js"
 
 //import Passport
 const passport= require('passport');
-require('./passport;')
+require('./passport;') */
 
 // add Schemas to the API
 const Models= require('./models.js');
@@ -87,12 +87,14 @@ app.post('/users/:userId/movies/:movieId', (req, res) => {
     } else if (!movie) {
         res.status(400).send('Movie not found')
     } else {
-            Users.findOneAndUpdate({_id: req.params.userId},{
-                $addToSet: {
+        Users.findOneAndUpdate({_id: req.params.userId},{
+            $addToSet: {
                 FavoriteMovies: req.params.movieId
-                }
-        }).then( (user) => {
-            res.status(200).json({Username: user.Username, FavoriteMovies: user.FavoriteMovies});
+            },
+        },
+        {new: true}) //Returns updated object,/*
+        .then( (updatedUser) => {
+            res.status(200).json({Username: updatedUser.Username, FavoriteMovies: updatedUser.FavoriteMovies});
         }).catch((err) => {
             console.error(err);
             res.status(500).send('Error: '+ err)
