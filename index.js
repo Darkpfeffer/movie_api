@@ -177,24 +177,23 @@ app.get('/movies/directors/:directorName', (req, res) => {
 } */
 app.put('/users/:Username', (req, res) => {
 
-    Users.findOneAndUpdate({Username: req.params.Username })
-        .then( { $set:
+    Users.findOneAndUpdate({Username: req.params.Username }, { $set:
             {
                 Username: req.body.Username,
                 Password: req.body.Password,
                 Email: req.body.Email,
                 Birthday: req.body.Birthday
             }
-        }).then((updatedUser) => {
-                res.status(200).json(updatedUser)
-        }).catch((err) => {
-            if(err) {
-                res.status(400).send('User couldn\'t be updated: ' + err)
-            } 
-        })
+        },
+        {new: true}
+    ).then((updatedUser) => {
+            res.status(200).json(updatedUser)
+    }).catch((err) => {
+        if(err) {
+            res.status(400).send('User couldn\'t be updated: ' + err)
+        } 
+    })
 })
-
-//DELETE
 
 // Allow users to remove a movie from their list of favorites
 app.put('/users/:userId/movies/:movieId', (req, res) => {
@@ -208,11 +207,13 @@ app.put('/users/:userId/movies/:movieId', (req, res) => {
     } else if (!movie) {
         res.status(400).send('Movie not found')
     } else {
-            Users.findOneAndUpdate({_id: req.params.userId},{
-                $pull: {
-                FavoriteMovies: req.params.movieId
-                }
-        }).then( (user) => {
+        Users.findOneAndUpdate({_id: req.params.userId},{
+            $pull: {
+            FavoriteMovies: req.params.movieId
+            }
+        },
+        {new: true}
+        ).then( (user) => {
             res.status(200).json({Username: user.Username, FavoriteMovies: user.FavoriteMovies});
         }).catch((err) => {
             console.error(err);
@@ -220,6 +221,8 @@ app.put('/users/:userId/movies/:movieId', (req, res) => {
         });
     }
 });
+
+//DELETE
 
 // Allow users to deregister
 app.delete('/users/:id', (req, res) => {

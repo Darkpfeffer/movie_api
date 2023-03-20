@@ -184,7 +184,7 @@
                             <br>
                             Example request body:<br>
                             {<br>
-                                "Username": "Mary",<br>
+                                "Username": "UpdatedMary",<br>
                                 "Password": "example456!",<br>
                                 "Email": "mary@example.com",<br>
                                 "Birthday": "2001-10-24"<br>
@@ -192,15 +192,15 @@
                             <br>
                             Example response:<br>
                             {
-                                _id: ObjectId("641309dbd3d6abe814c76a1c"),
-                                Username: 'Mary',
-                                Password: 'example456!',
-                                Email: 'mary@example.com',
-                                Birthday: ISODate("2001-10-24T00:00:00.000Z"),
-                                FavoriteMovies: []
+                                "_id": "641309dbd3d6abe814c76a1c",
+                                "Username": "UpdatedMary",
+                                "Password": "example456!",
+                                "Email": "mary@example.com",
+                                "Birthday": "2001-10-24T00:00:00.000Z",
+                                "FavoriteMovies": [],
+                                "__v": 0
                             }
                         </p>
-                <h3>DELETE</h3>
                     <h4>Remove movie from user's favorite list</h4>
                         <p>
                             Description: This will allow the user to remove a movie title
@@ -223,6 +223,7 @@
                                 ]
                             }
                         </p>
+                <h3>DELETE</h3>
                     <h4>Deregister from the site</h4>
                         <p>
                             Description: This will allow the user to remove their account
