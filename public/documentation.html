@@ -10,12 +10,40 @@
                     (use 'ctrl+F' to search for them):<br>
                     'CRATE', 'READ', 'UPDATE', 'DELETE'
                 </p>
+                <h3>LOGIN</h3>
+                    <p>
+                        Description: This will allow you to log in to the site<br>
+                        Endpoint URL: '/login?Username=:Username&Password=:Password'<br>
+                        ':Username' must be replaced with the username<br>
+                        ':Password' must be replaced with the password of the user<br>
+                        Format of the response data: 'JSON'<br>
+                        <br>
+                        Example URL: http://127.0.0.1:8080/login?Username=Mary&Password=example456!<br>
+                        <br>
+                        Example response:<br>
+                        {<br>
+                            "user": {
+                                "_id": "641309dbd3d6abe814c76a1c",
+                                "Username": "Mary",
+                                "Password": "example456!",
+                                "Email": "mary@example.com",
+                                "Birthday": "2001-10-24T00:00:00.000Z",
+                                "FavoriteMovies": [],
+                                "__v": 0
+                            },<br>
+                            "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NDEzMDlkYmQzZDZhYmU4MTRjNzZhMWMiLCJVc2VybmFtZSI6Ik1hcnkiLCJQYXNzd29yZCI6ImV4YW1wbGU0NTYhIiwiRW1haWwiOiJtYXJ5QGV4YW1wbGUuY29tIiwiQmlydGhkYXkiOiIyMDAxLTEwLTI0VDAwOjAwOjAwLjAwMFoiLCJGYXZvcml0ZU1vdmllcyI6W10sIl9fdiI6MCwiaWF0IjoxNjc5NDc3OTYxLCJleHAiOjE2ODAwODI3NjEsInN1YiI6Ik1hcnkifQ.B82SgvK_MCxE3QENmiVU4E9YZpipc_uHkBUDDmH1hjQ"<br>
+                        }
+                        
+                        After login, use the value of 'token' in the HTML header (Type: Bearer Token) to authenticate yourself at the site.
+
+                    </p>
                 <h3>CREATE</h3>
                     <h4>Add a user</h4>
                         <p>
                             Description: This will add a new user to the user's array.<br>
                             Endpoint URL: '/users'<br>
                             Method type: 'POST'<br>
+                            Authentication required: 'JWT Bearer Token'<br>
                             Format of data expected in the body of the request: 'JSON'<br>
                             Format of the response data: 'JSON'<br>
                             <br>
@@ -46,6 +74,7 @@
                             ':movieId' must be replaced with the ID of the movie<br>
                             <br>
                             Method type: 'POST'<br>
+                            Authentication required: 'JWT Bearer Token'<br>
                             Format of the response data: 'JSON'
                             <br>
                             Example request URL endpoint:<br>
@@ -78,6 +107,7 @@
                             from the external database<br>
                             Endpoint URL: '/movies'<br>
                             Method type: 'GET'<br>
+                            Authentication required: 'JWT Bearer Token'<br>
                             Format of the response data: 'JSON'<br>
                             <br>
                             Example response:<br>
@@ -107,6 +137,7 @@
                             Endpoint URL: '/movies/:title'<br>
                             ':title' must be repaced with the title of the movie.<br>
                             Method type: 'GET'<br>
+                            Authentication required: 'JWT Bearer Token'<br>
                             Format of the response data: 'JSON'<br>
                             <br>
                             Example request URL endpoint:<br>
@@ -141,6 +172,7 @@
                             ':genreName' must be replaced with the name of the genre.<br>
                             <br>
                             Method type: 'GET'<br>
+                            Authentication required: 'JWT Bearer Token'<br>
                             Format of the response data: 'JSON'<br>
                             <br>
                             Example request URL endpoint: '/movies/genre/action'<br>
@@ -159,6 +191,7 @@
                             ':directorName' must be replaced with the full name of the director.<br>
                             <br>
                             Method type: 'GET'<br>
+                            Authentication required: 'JWT Bearer Token'<br>
                             Format of the response data: 'JSON'<br>
                             <br>
                             Example request URL endpoint: '/movies/directors/Nick%20Cassavetes'<br> 
@@ -177,6 +210,7 @@
                             ':Username' must be replaced with the username of the user<br>
                             <br>
                             Method type: 'PUT'<br>
+                            Authentication required: 'JWT Bearer Token'<br>
                             Format of data expected in the body of the request: 'JSON'<br>
                             Format of the response data: 'JSON'<br>
                             <br>
@@ -210,6 +244,7 @@
                             ':movieId' must be replaced with the ID of the movie.<br>
                             <br>
                             Method type: 'PUT'<br>
+                            Authentication required: 'JWT Bearer Token'<br>
                             Format of the response data: 'JSON'<br>
                             <br>
                             Example request URL endpoint: '/users/640c78738b910ed1587f7778/movies/640c72cf274958af87029bdf'<br>
@@ -232,6 +267,7 @@
                             ':id' must be replaced with the user's ID.<br>
                             <br>
                             Method type: 'DELETE'<br>
+                            Authentication required: 'JWT Bearer Token'<br>
                             Format of the response data: Text<br>
                             <br>
                             Example request URL endpoint: '/users/64130ea893504592c757550f'<br>
