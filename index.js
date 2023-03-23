@@ -68,7 +68,7 @@ app.use(express.static('public'));
     Birthday: Date (required)
 
 } */
-app.post('/users', passport.authenticate('jwt', {session: false }), (req, res) => {
+app.post('/users', passport.authenticate('jwt', {session: false }),
     // Validation logic for request
     [
         // Username should be required and should be minimum 5 characters long
@@ -86,7 +86,6 @@ app.post('/users', passport.authenticate('jwt', {session: false }), (req, res) =
         if (!errors.isEmpty()) {
             return res.status(422).json({errors: errors.array() });
         }
-    }
     
     // Add a user to database
     let hashedPassword= Users.hashPassword(req.body.Password)
@@ -215,7 +214,24 @@ app.get('/movies/directors/:directorName', passport.authenticate('jwt', {session
     Birthday: Date
     (required)
 } */
-app.put('/users/:Username', passport.authenticate('jwt', {session: false }), (req, res) => {
+app.put('/users/:Username', passport.authenticate('jwt', {session: false }), [
+    // Username should be required and should be minimum 5 characters long
+    check('Username', 'Username is required and has to be minimum five characters long').isLength({min: 5}),
+    // Username should be only alphanumeric characters
+    check('Username', 'Username contains non alphanumeric characters - not allowed.').isAlphanumeric(),
+    // Password is required
+    check('Password', 'Password is required').not().isEmpty(),
+    // Email is required and should be valid
+    check('Email', 'Email does not appear to be valid').isEmail()
+], (req, res) => {
+    // check the validation object for errors
+    let errors= validationResult(req);
+
+    if (!errors.isEmpty()) {
+        return res.status(422).json({errors: errors.array() });
+    }
+
+    //Update user info
     let hashedPassword= Users.hashPassword(req.body.Password)
 
     Users.findOneAndUpdate({Username: req.params.Username }, { $set:
