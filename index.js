@@ -46,7 +46,8 @@ const Models= require('./models.js');
 const Movies= Models.Movie;
 const Users= Models.User;
 
-mongoose.connect('mongodb://127.0.0.1:27017/moviedbnosql', {useNewUrlParser: true, useUnifiedTopology: true})
+mongoose.connect('mongodb+srv://Darkpfeffer:189431Prefaremon151@databasesofdarkpfeffer.5tmisma.mongodb.net/movieDB?retryWrites=true&w=majority', {useNewUrlParser: true, useUnifiedTopology: true});
+//mongoose.connect('mongodb://127.0.0.1:27017/moviedbnosql', {useNewUrlParser: true, useUnifiedTopology: true});
 
 // logging with 'morgan'
 const accessLogStream= fs.createWriteStream(path.join('./log.txt'), {flags: 'a'});
