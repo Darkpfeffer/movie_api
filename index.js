@@ -69,6 +69,26 @@ app.use(express.static('public'));
 
 } */
 app.post('/users', passport.authenticate('jwt', {session: false }), (req, res) => {
+    // Validation logic for request
+    [
+        // Username should be required and should be minimum 5 characters long
+        check('Username', 'Username is required and has to be minimum five characters long').isLength({min: 5}),
+        // Username should be only alphanumeric characters
+        check('Username', 'Username contains non alphanumeric characters - not allowed.').isAlphanumeric(),
+        // Password is required
+        check('Password', 'Password is required').not().isEmpty(),
+        // Email is required and should be valid
+        check('Email', 'Email does not appear to be valid').isEmail()
+    ], (req, res) => {
+        // check the validation object for errors
+        let errors= validationResult(req);
+
+        if (!errors.isEmpty()) {
+            return res.status(422).json({errors: errors.array() });
+        }
+    }
+    
+    // Add a user to database
     let hashedPassword= Users.hashPassword(req.body.Password)
     Users.findOne({ Username: req.body.Username})
         .then((user) => {
