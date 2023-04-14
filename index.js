@@ -64,7 +64,7 @@ app.use(express.static('public'));
     Birthday: Date (required)
 
 } */
-app.post('/users', passport.authenticate('jwt', {session: false }),
+app.post('/users',
     // Validation logic for request
     [
         // Username should be required and should be minimum 5 characters long
