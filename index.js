@@ -266,8 +266,8 @@ app.put('/users/:userId/movies/:movieId', passport.authenticate('jwt', {session:
             }
         },
         {new: true}
-        ).then( (user) => {
-            res.status(200).json({user});
+        ).then( (updatedUser) => {
+            res.status(200).json({updatedUser});
         }).catch((err) => {
             console.error(err);
             res.status(500).send('Error: '+ err)
