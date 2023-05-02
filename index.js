@@ -129,7 +129,7 @@ app.post('/users/:userId/movies/:movieId', passport.authenticate('jwt', {session
         },
         {new: true}) //Returns updated object /*
         .then( (updatedUser) => {
-            res.status(200).json({Username: updatedUser.Username, FavoriteMovies: updatedUser.FavoriteMovies});
+            res.status(200).json(updatedUser);
         }).catch((err) => {
             console.error(err);
             res.status(500).send('Error: '+ err)
