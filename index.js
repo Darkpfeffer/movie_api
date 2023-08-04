@@ -20,7 +20,7 @@ app.use(bodyParser.urlencoded({extended: true}));
 const cors= require('cors');
 const allowedOrigins= [
     'https://darkpfeffer-myflix.netlify.app',
-    'https://darkpfeffer.github.io/myFlix-Angular-client', 
+    'https://darkpfeffer.github.io', 
     'http://localhost:1234',
     'http://localhost:4200'
 ]
