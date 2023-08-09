@@ -184,9 +184,7 @@
 <li>Endpoint URL: '/'</li>
 <li>Method type: 'GET'</li>
 <li>Format of the response data: Text</li>
-</ul>
-<p>Example response:
-Welcome to my movies API!</p></p>
+</ul></p>
     
 
 
@@ -261,6 +259,11 @@ Welcome to my movies API!</p></p>
 
 
 
+    <h5>Example</h5>
+    
+    <pre class="prettyprint"><code>Response:Welcome to my movies API!</code></pre>
+
+
 
         
             
@@ -293,14 +296,6 @@ Welcome to my movies API!</p></p>
 </li>
 <li>
 <p>Format of the response data: 'JSON'</p>
-</li>
-<li>
-<p>Example request URL endpoint:
-'users/64130ea893504592c757550f/movies/640c72cf274958af87029bdf'</p>
-</li>
-<li>
-<p>Example response:
-'{ &quot;Username&quot;: &quot;Mary2&quot;, &quot;Password&quot;: &quot;$2b$10$Qzj0VgzghovcMDB1c7QyU.w39n2jAMH6rw6FRzZLeeX4WArti2OO2&quot;, &quot;Email&quot;: &quot;mary@example.com&quot;, &quot;Birthday&quot;: &quot;2001-10-24T00:00:00.000Z&quot;, &quot;FavoriteMovies&quot;: [640c72cf274958af87029bdf], &quot;_id&quot;: &quot;64130ea893504592c757550f&quot;}</p>
 </li>
 </ul></p>
     
@@ -377,6 +372,13 @@ Welcome to my movies API!</p></p>
 
 
 
+    <h5>Examples</h5>
+    
+    <pre class="prettyprint"><code>Request URL endpoint: 'users/64130ea893504592c757550f/movies/640c72cf274958af87029bdf'</code></pre>
+
+    <pre class="prettyprint"><code>Response: '{ "Username": "Mary2", "Password": "$2b$10$Qzj0VgzghovcMDB1c7QyU.w39n2jAMH6rw6FRzZLeeX4WArti2OO2", "Email": "mary@example.com", "Birthday": "2001-10-24T00:00:00.000Z", "FavoriteMovies": [640c72cf274958af87029bdf], "_id": "64130ea893504592c757550f"}</code></pre>
+
+
 
         
             
@@ -404,17 +406,7 @@ Email: String, (required)
 Birthday: Date (required)
 </code></pre>
 <p>}</p>
-<p>The password will be hashed and stored in the database that way.</p>
-<p>Example request body:</p>
-<p>{</p>
-<pre><code>  &quot;Username&quot;: &quot;Mary&quot;,
-  &quot;Password&quot;: &quot;example456!&quot;,
-  &quot;Email&quot;: &quot;mary@example.com&quot;,
-  &quot;Birtday&quot;: &quot;2001-10-24&quot;
-</code></pre>
-<p>}</p>
-<p>Example response:
-{ &quot;Username&quot;: &quot;Mary2&quot;, &quot;Password&quot;: &quot;$2b$10$Qzj0VgzghovcMDB1c7QyU.w39n2jAMH6rw6FRzZLeeX4WArti2OO2&quot;, &quot;Email&quot;: &quot;mary@example.com&quot;, &quot;Birthday&quot;: &quot;2001-10-24T00:00:00.000Z&quot;, &quot;FavoriteMovies&quot;: [], &quot;_id&quot;: &quot;64130ea893504592c757550f&quot;, &quot;__v&quot;: 0 }</p></p>
+<p>The password will be hashed and stored in the database that way.</p></p>
     
 
 
@@ -489,6 +481,13 @@ Birthday: Date (required)
 
 
 
+    <h5>Examples</h5>
+    
+    <pre class="prettyprint"><code>Request body:{      "Username": "Mary",      "Password": "example456!",      "Email": "mary@example.com",      "Birtday": "2001-10-24"}</code></pre>
+
+    <pre class="prettyprint"><code>Response:{ "Username": "Mary2", "Password": "$2b$10$Qzj0VgzghovcMDB1c7QyU.w39n2jAMH6rw6FRzZLeeX4WArti2OO2", "Email": "mary@example.com", "Birthday": "2001-10-24T00:00:00.000Z", "FavoriteMovies": [], "_id": "64130ea893504592c757550f", "__v": 0 }</code></pre>
+
+
 
         
             
@@ -515,13 +514,6 @@ Birthday: Date (required)
 </li>
 <li>
 <p>Format of the response data: Text</p>
-</li>
-<li>
-<p>Example request URL endpoint: '/users/64130ea893504592c757550f'</p>
-</li>
-<li>
-<p>Example response:
-user 64130ea893504592c757550f has been deleted</p>
 </li>
 </ul></p>
     
@@ -598,6 +590,13 @@ user 64130ea893504592c757550f has been deleted</p>
 
 
 
+    <h5>Examples</h5>
+    
+    <pre class="prettyprint"><code>Request URL endpoint: '/users/64130ea893504592c757550f' </code></pre>
+
+    <pre class="prettyprint"><code>Response: user 64130ea893504592c757550f has been deleted</code></pre>
+
+
 
         
             
@@ -610,29 +609,11 @@ user 64130ea893504592c757550f has been deleted</p>
 
     
     <p class="summary"><ul>
-<li>
-<p>Endpoint URL: '/movies/:title'</p>
-</li>
-<li>
-<p>':title' must be repaced with the title of the movie.</p>
-</li>
-<li>
-<p>Method type: 'GET'</p>
-</li>
-<li>
-<p>Authentication required: 'JWT Bearer Token'</p>
-</li>
-<li>
-<p>Format of the response data: 'JSON'</p>
-</li>
-<li>
-<p>Example request URL endpoint:
-'/movies/Inception'</p>
-</li>
-<li>
-<p>Example response:
-[ { &quot;Genre&quot;: { &quot;Name&quot;: &quot;Action&quot;, &quot;Description&quot;: &quot;Action films are built around a core set of characteristics: spectacular physical action; a narrative emphasis on fights, chases, and explosions; and a combination of state-of-the-art special effects and stunt-work.&quot; }, &quot;Director&quot;: { &quot;Name&quot;: &quot;Christopher Nolan&quot;, &quot;Bio&quot;: &quot;He is best known for his cerebral, often nonlinear, storytelling, acclaimed writer-director was born in London, England. Over the course of 15 years of filmmaking, Nolan has gone from low-budget independent films to working on some of the biggest blockbusters ever made.&quot;, &quot;Birthyear&quot;: 1970 }, &quot;Actors&quot;: [], &quot;_id&quot;: &quot;640c6890274958af87029bd7&quot;, &quot;Title&quot;: &quot;Inception&quot;, &quot;Description&quot;: &quot;A thief who steals corporate secrets through the use of dream-sharing technology is given the inverse task of planting an idea into the mind of a C.E.O but his tragic past may doom the project and his team to disaster.&quot;, &quot;Release_date&quot;: &quot;2010&quot;, &quot;ImageURL&quot;: &quot;https://de.web.img2.acsta.net/newsv7/19/08/09/19/16/2096534.jpg&quot; } ]</p>
-</li>
+<li>Endpoint URL: '/movies/:title'</li>
+<li>':title' must be repaced with the title of the movie.</li>
+<li>Method type: 'GET'</li>
+<li>Authentication required: 'JWT Bearer Token'</li>
+<li>Format of the response data: 'JSON'</li>
 </ul></p>
     
 
@@ -708,6 +689,13 @@ user 64130ea893504592c757550f has been deleted</p>
 
 
 
+    <h5>Examples</h5>
+    
+    <pre class="prettyprint"><code>Request URL endpoint: '/movies/Inception' </code></pre>
+
+    <pre class="prettyprint"><code>Response: [ { "Genre": { "Name": "Action", "Description": "Action films are built around a core set of characteristics: spectacular physical action; a narrative emphasis on fights, chases, and explosions; and a combination of state-of-the-art special effects and stunt-work." }, "Director": { "Name": "Christopher Nolan", "Bio": "He is best known for his cerebral, often nonlinear, storytelling, acclaimed writer-director was born in London, England. Over the course of 15 years of filmmaking, Nolan has gone from low-budget independent films to working on some of the biggest blockbusters ever made.", "Birthyear": 1970 }, "Actors": [], "_id": "640c6890274958af87029bd7", "Title": "Inception", "Description": "A thief who steals corporate secrets through the use of dream-sharing technology is given the inverse task of planting an idea into the mind of a C.E.O but his tragic past may doom the project and his team to disaster.", "Release_date": "2010", "ImageURL": "https://de.web.img2.acsta.net/newsv7/19/08/09/19/16/2096534.jpg" } ]</code></pre>
+
+
 
         
             
@@ -732,13 +720,6 @@ user 64130ea893504592c757550f has been deleted</p>
 </li>
 <li>
 <p>Format of the response data: 'JSON'</p>
-</li>
-<li>
-<p>Example request URL endpoint: '/movies/directors/Nick%20Cassavetes'</p>
-</li>
-<li>
-<p>Example response:
-{ &quot;Name&quot;: &quot;Nick Cassavetes&quot;, &quot;Bio&quot;: &quot;He was born in New York City, the son of actress Gena Rowlands and Greek-American actor and film director John Cassavetes. As a child, he appeared in two of his father's films: Husbands (1970) and A Woman Under the Influence (1974). After spending so much of his youth surrounded by the film industry Cassavetes initially decided he did not want to go into the field. He instead attended Syracuse University on a basketball scholarship. His athletic career was effectively ended by an injury, and he decided to rethink his aspirations, ultimately deciding to attend his parents' alma mater, the American Academy of Dramatic Arts in New York.&quot;, &quot;Birthyear&quot;: 1959 }</p>
 </li>
 </ul></p>
     
@@ -815,6 +796,13 @@ user 64130ea893504592c757550f has been deleted</p>
 
 
 
+    <h5>Examples</h5>
+    
+    <pre class="prettyprint"><code>Request URL endpoint: '/movies/directors/Nick%20Cassavetes' </code></pre>
+
+    <pre class="prettyprint"><code>Response: { "Name": "Nick Cassavetes", "Bio": "He was born in New York City, the son of actress Gena Rowlands and Greek-American actor and film director John Cassavetes. As a child, he appeared in two of his father's films: Husbands (1970) and A Woman Under the Influence (1974). After spending so much of his youth surrounded by the film industry Cassavetes initially decided he did not want to go into the field. He instead attended Syracuse University on a basketball scholarship. His athletic career was effectively ended by an injury, and he decided to rethink his aspirations, ultimately deciding to attend his parents' alma mater, the American Academy of Dramatic Arts in New York.", "Birthyear": 1959 }</code></pre>
+
+
 
         
             
@@ -841,13 +829,6 @@ user 64130ea893504592c757550f has been deleted</p>
 </li>
 <li>
 <p>Format of the response data: 'JSON'</p>
-</li>
-<li>
-<p>Example request URL endpoint: '/movies/genre/Action'</p>
-</li>
-<li>
-<p>Example response:
-{ &quot;Name&quot;: &quot;Action&quot;, &quot;Description&quot;: &quot;Action films are built around a core set of characteristics: spectacular physical action; a narrative emphasis on fights, chases, and explosions; and a combination of state-of-the-art special effects and stunt-work.&quot; }</p>
 </li>
 </ul></p>
     
@@ -924,6 +905,13 @@ user 64130ea893504592c757550f has been deleted</p>
 
 
 
+    <h5>Examples</h5>
+    
+    <pre class="prettyprint"><code>Request URL endpoint: '/movies/genre/Action' </code></pre>
+
+    <pre class="prettyprint"><code>Response: { "Name": "Action", "Description": "Action films are built around a core set of characteristics: spectacular physical action; a narrative emphasis on fights, chases, and explosions; and a combination of state-of-the-art special effects and stunt-work." }</code></pre>
+
+
 
         
             
@@ -936,22 +924,10 @@ user 64130ea893504592c757550f has been deleted</p>
 
     
     <p class="summary"><ul>
-<li>
-<p>Endpoint URL: '/movies'</p>
-</li>
-<li>
-<p>Method type: 'GET'</p>
-</li>
-<li>
-<p>Authentication required: 'JWT Bearer Token'</p>
-</li>
-<li>
-<p>Format of the response data: 'JSON'</p>
-</li>
-<li>
-<p>Example response:
-[ { &quot;title&quot;: &quot;Hitman&quot;, &quot;description&quot;: &quot;A gun-for-hire known only as Agent 47 hired by a group known only as 'The Organization' is ensnared in a political conspiracy, which finds him pursued by both Interpol and the Russian military as he treks across Russia and Eastern Europe.&quot;, &quot;genre&quot;: { &quot;name&quot;: &quot;action&quot;, &quot;description&quot;: &quot;Action films are built around a core set of characteristics: spectacular physical action; a narrative emphasis on fights, chases, and explosions; and a combination of state-of-the-art special effects and stunt-work.&quot; }, &quot;releaseDate&quot;: &quot;2007&quot;, &quot;director&quot;: { &quot;name&quot;: &quot;Xavier Gens&quot;, &quot;bio&quot;: &quot;He was born in Dunkerque, Nord, France. He is a director and assistant director, known for Frontière(s) (2007), The Divide (2011) and Cell (2016). He has been married to Mounia Meddour since 2005.&quot;, &quot;birthYear&quot;: &quot;1975&quot;, &quot;deathYear&quot;: &quot;&quot; }, }, ... ]</p>
-</li>
+<li>Endpoint URL: '/movies'</li>
+<li>Method type: 'GET'</li>
+<li>Authentication required: 'JWT Bearer Token'</li>
+<li>Format of the response data: 'JSON'</li>
 </ul></p>
     
 
@@ -1027,6 +1003,11 @@ user 64130ea893504592c757550f has been deleted</p>
 
 
 
+    <h5>Example</h5>
+    
+    <pre class="prettyprint"><code>Response: [ { "title": "Hitman", "description": "A gun-for-hire known only as Agent 47 hired by a group known only as 'The Organization' is ensnared in a political conspiracy, which finds him pursued by both Interpol and the Russian military as he treks across Russia and Eastern Europe.", "genre": { "name": "action", "description": "Action films are built around a core set of characteristics: spectacular physical action; a narrative emphasis on fights, chases, and explosions; and a combination of state-of-the-art special effects and stunt-work." }, "releaseDate": "2007", "director": { "name": "Xavier Gens", "bio": "He was born in Dunkerque, Nord, France. He is a director and assistant director, known for Frontière(s) (2007), The Divide (2011) and Cell (2016). He has been married to Mounia Meddour since 2005.", "birthYear": "1975", "deathYear": "" }, }, ... ]</code></pre>
+
+
 
         
             
@@ -1050,17 +1031,8 @@ Password: password (must be replaced with the password of the user)
 }</p>
 <ul>
 <li>Response data: JSON</li>
-</ul>
-<p>Example request:
-{
-Username: Mary,
-Password: &quot;example456!
-}</p>
-<p>Example response:
-&quot;user&quot;: { &quot;_id&quot;: &quot;641309dbd3d6abe814c76a1c&quot;, &quot;Username&quot;: &quot;Mary&quot;, &quot;Password&quot;: &quot;$2b$10$Qzj0VgzghovcMDB1c7QyU.w39n2jAMH6rw6FRzZLeeX4WArti2OO2&quot;, &quot;Email&quot;: &quot;mary@example.com&quot;, &quot;Birthday&quot;: &quot;2001-10-24T00:00:00.000Z&quot;, &quot;FavoriteMovies&quot;: [], &quot;__v&quot;: 0 },
-&quot;token&quot;: &quot;eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NDEzMDlkYmQzZDZhYmU4MTRjNzZhMWMiLCJVc2VybmFtZSI6Ik1hcnkiLCJQYXNzd29yZCI6ImV4YW1wbGU0NTYhIiwiRW1haWwiOiJtYXJ5QGV4YW1wbGUuY29tIiwiQmlydGhkYXkiOiIyMDAxLTEwLTI0VDAwOjAwOjAwLjAwMFoiLCJGYXZvcml0ZU1vdmllcyI6W10sIl9fdiI6MCwiaWF0IjoxNjc5NDc3OTYxLCJleHAiOjE2ODAwODI3NjEsInN1YiI6Ik1hcnkifQ.B82SgvK_MCxE3QENmiVU4E9YZpipc_uHkBUDDmH1hjQ&quot;
-}</p>
-<p>After login, user the 'token' in the HTML header 'Authentication: Bearer ${token}</p></p>
+<li>After login, user the 'token' in the HTML header 'Authentication: Bearer ${token}</li>
+</ul></p>
     
 
 
@@ -1135,6 +1107,13 @@ Password: &quot;example456!
 
 
 
+    <h5>Examples</h5>
+    
+    <pre class="prettyprint"><code>Request: { Username: Mary, Password: "example456!}</code></pre>
+
+    <pre class="prettyprint"><code>Response:"user": { "_id": "641309dbd3d6abe814c76a1c", "Username": "Mary", "Password": "$2b$10$Qzj0VgzghovcMDB1c7QyU.w39n2jAMH6rw6FRzZLeeX4WArti2OO2", "Email": "mary@example.com", "Birthday": "2001-10-24T00:00:00.000Z", "FavoriteMovies": [], "__v": 0 },"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NDEzMDlkYmQzZDZhYmU4MTRjNzZhMWMiLCJVc2VybmFtZSI6Ik1hcnkiLCJQYXNzd29yZCI6ImV4YW1wbGU0NTYhIiwiRW1haWwiOiJtYXJ5QGV4YW1wbGUuY29tIiwiQmlydGhkYXkiOiIyMDAxLTEwLTI0VDAwOjAwOjAwLjAwMFoiLCJGYXZvcml0ZU1vdmllcyI6W10sIl9fdiI6MCwiaWF0IjoxNjc5NDc3OTYxLCJleHAiOjE2ODAwODI3NjEsInN1YiI6Ik1hcnkifQ.B82SgvK_MCxE3QENmiVU4E9YZpipc_uHkBUDDmH1hjQ"}</code></pre>
+
+
 
         
             
@@ -1164,13 +1143,6 @@ Password: &quot;example456!
 </li>
 <li>
 <p>Format of the response data: 'JSON'</p>
-</li>
-<li>
-<p>Example request URL endpoint: '/users/64130ea893504592c757550f/movies/640c72cf274958af87029bdf'</p>
-</li>
-<li>
-<p>Example response:
-'{ &quot;updatedUser&quot;: { &quot;Username&quot;: &quot;Mary2&quot;, &quot;Password&quot;: &quot;$2b$10$Qzj0VgzghovcMDB1c7QyU.w39n2jAMH6rw6FRzZLeeX4WArti2OO2&quot;, &quot;Email&quot;: &quot;mary@example.com&quot;, &quot;Birthday&quot;: &quot;2001-10-24T00:00:00.000Z&quot;, &quot;FavoriteMovies&quot;: [], &quot;_id&quot;: &quot;64130ea893504592c757550f&quot;} }</p>
 </li>
 </ul></p>
     
@@ -1247,6 +1219,13 @@ Password: &quot;example456!
 
 
 
+    <h5>Examples</h5>
+    
+    <pre class="prettyprint"><code>Request URL endpoint: '/users/64130ea893504592c757550f/movies/640c72cf274958af87029bdf'</code></pre>
+
+    <pre class="prettyprint"><code>Response: '{ "updatedUser": { "Username": "Mary2", "Password": "$2b$10$Qzj0VgzghovcMDB1c7QyU.w39n2jAMH6rw6FRzZLeeX4WArti2OO2", "Email": "mary@example.com", "Birthday": "2001-10-24T00:00:00.000Z", "FavoriteMovies": [], "_id": "64130ea893504592c757550f"} }</code></pre>
+
+
 
         
             
@@ -1284,25 +1263,7 @@ Password: &quot;example456!
 <p>Password: String, (required)</p>
 <p>Email: String, (required)</p>
 <p>Birthday: Date (required)</p>
-<p>}</p>
-<ul>
-<li>
-<p>Example request URL endpoint:'/users/Mary'</p>
-</li>
-<li>
-<p>Example request body:
-{</p>
-<p>&quot;Username&quot;: &quot;UpdatedMary&quot;,</p>
-<p>&quot;Password&quot;: &quot;example456!&quot;,</p>
-<p>&quot;Email&quot;: &quot;mary@example.com&quot;,</p>
-<p>&quot;Birthday&quot;: &quot;2001-10-24&quot;</p>
-</li>
-</ul>
-<p>}</p>
-<ul>
-<li>Example response:
-{ &quot;_id&quot;: &quot;641309dbd3d6abe814c76a1c&quot;, &quot;Username&quot;: &quot;UpdatedMary&quot;, &quot;Password&quot;: &quot;$2b$10$Qzj0VgzghovcMDB1c7QyU.w39n2jAMH6rw6FRzZLeeX4WArti2OO2&quot;, &quot;Email&quot;: &quot;mary@example.com&quot;, &quot;Birthday&quot;: &quot;2001-10-24T00:00:00.000Z&quot;, &quot;FavoriteMovies&quot;: [], &quot;__v&quot;: 0 }</li>
-</ul></p>
+<p>}</p></p>
     
 
 
@@ -1377,6 +1338,15 @@ Password: &quot;example456!
 
 
 
+    <h5>Examples</h5>
+    
+    <pre class="prettyprint"><code>Request URL endpoint:'/users/Mary' </code></pre>
+
+    <pre class="prettyprint"><code>Request body: {          "Username": "UpdatedMary",     "Password": "example456!",     "Email": "mary@example.com",     "Birthday": "2001-10-24" } </code></pre>
+
+    <pre class="prettyprint"><code>Response: { "_id": "641309dbd3d6abe814c76a1c", "Username": "UpdatedMary", "Password": "$2b$10$Qzj0VgzghovcMDB1c7QyU.w39n2jAMH6rw6FRzZLeeX4WArti2OO2", "Email": "mary@example.com", "Birthday": "2001-10-24T00:00:00.000Z", "FavoriteMovies": [], "__v": 0 }</code></pre>
+
+
 
         
     
@@ -1400,7 +1370,7 @@ Password: &quot;example456!
 <br class="clear">
 
 <footer>
-    Documentation generated by <a href="https://github.com/jsdoc/jsdoc">JSDoc 4.0.2</a> on Wed Aug 09 2023 15:06:36 GMT+0200 (Central European Summer Time)
+    Documentation generated by <a href="https://github.com/jsdoc/jsdoc">JSDoc 4.0.2</a> on Wed Aug 09 2023 18:52:16 GMT+0200 (Central European Summer Time)
 </footer>
 
 <script> prettyPrint(); </script>
