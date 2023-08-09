@@ -13,23 +13,33 @@
                 <h3>LOGIN</h3>
                     <p>
                         Description: This will allow you to log in to the site<br>
-                        Endpoint URL: '/login?Username=:Username&Password=:Password'<br>
-                        ':Username' must be replaced with the username<br>
-                        ':Password' must be replaced with the password of the user<br>
+                        Endpoint URL: '/login'<br>
+                        Method type: 'POST'<br>
                         Format of the response data: 'JSON'<br>
                         <br>
-                        Example URL: http://127.0.0.1:8080/login?Username=Mary&Password=example456!<br>
+                        Expected request body (JSON):<br>
+                            {<br>
+                                Username: username (must be replaced with the username of the user)<br>
+                                Password: password (must be replaced with the password of the user) <br>
+                            }<br>
+                            <br>
+                        Example request body: {<br>
+                            { <br>
+                                Username: Mary, <br>
+                                Password: "example456! <br>
+                            }<br>
+                        }<br>
                         <br>
                         Example response:<br>
                         {<br>
-                            "user": {
-                                "_id": "641309dbd3d6abe814c76a1c",
-                                "Username": "Mary",
-                                "Password": "example456!",
-                                "Email": "mary@example.com",
-                                "Birthday": "2001-10-24T00:00:00.000Z",
-                                "FavoriteMovies": [],
-                                "__v": 0
+                            "user": {<br>
+                                "_id": "641309dbd3d6abe814c76a1c",<br>
+                                "Username": "Mary",<br>
+                                "Password": "$2b$10$Qzj0VgzghovcMDB1c7QyU.w39n2jAMH6rw6FRzZLeeX4WArti2OO2",<br>
+                                "Email": "mary@example.com",<br>
+                                "Birthday": "2001-10-24T00:00:00.000Z",<br>
+                                "FavoriteMovies": [],<br>
+                                "__v": 0<br>
                             },<br>
                             "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NDEzMDlkYmQzZDZhYmU4MTRjNzZhMWMiLCJVc2VybmFtZSI6Ik1hcnkiLCJQYXNzd29yZCI6ImV4YW1wbGU0NTYhIiwiRW1haWwiOiJtYXJ5QGV4YW1wbGUuY29tIiwiQmlydGhkYXkiOiIyMDAxLTEwLTI0VDAwOjAwOjAwLjAwMFoiLCJGYXZvcml0ZU1vdmllcyI6W10sIl9fdiI6MCwiaWF0IjoxNjc5NDc3OTYxLCJleHAiOjE2ODAwODI3NjEsInN1YiI6Ik1hcnkifQ.B82SgvK_MCxE3QENmiVU4E9YZpipc_uHkBUDDmH1hjQ"<br>
                         }
@@ -43,7 +53,6 @@
                             Description: This will add a new user to the user's array.<br>
                             Endpoint URL: '/users'<br>
                             Method type: 'POST'<br>
-                            Authentication required: 'JWT Bearer Token'<br>
                             Format of data expected in the body of the request: 'JSON'<br>
                             Format of the response data: 'JSON'<br>
                             <br>
@@ -57,37 +66,42 @@
                             <br>
                             Example response:<br>
                             {
-                                "Username": "Mary2",
-                                "Password": "example456!",
-                                "Email": "mary@example.com",
-                                "Birthday": "2001-10-24T00:00:00.000Z",
-                                "FavoriteMovies": [],
-                                "_id": "64130ea893504592c757550f",
-                                "__v": 0
+                                "Username": "Mary2",<br>
+                                "Password": "$2b$10$Qzj0VgzghovcMDB1c7QyU.w39n2jAMH6rw6FRzZLeeX4WArti2OO2",<br>
+                                "Email": "mary@example.com",<br>
+                                "Birthday": "2001-10-24T00:00:00.000Z",<br>
+                                "FavoriteMovies": [],<br>
+                                "_id": "64130ea893504592c757550f",<br>
+                                "__v": 0<br>
                             }
                         </p>
                     <h4>Add a movie to the user's favorite list</h4>
                         <p>
-                            Description: This will add a movie title to the user's favorite list.
-                            Endpoint URL: '/users/:id/:movieTitle'<br>
-                            ':userId' must be replaced with the ID of the user.<br>
-                            ':movieId' must be replaced with the ID of the movie<br>
+                            Description: This will add a movie title to the user's favorite list.<br>
+                            Endpoint URL: '/users/:userID/movies/:movieID'<br>
+                            ':userID' must be replaced with the ID of the user.<br>
+                            ':movieID' must be replaced with the ID of the movie<br>
                             <br>
                             Method type: 'POST'<br>
                             Authentication required: 'JWT Bearer Token'<br>
                             Format of the response data: 'JSON'
                             <br>
                             Example request URL endpoint:<br>
-                            'users/640c78738b910ed1587f7778/movies/640c72cf274958af87029bdf'<br>
+                            'users/64130ea893504592c757550f/movies/640c72cf274958af87029bdf'<br>
                             <br>
                             Example response:<br>
                             {<br>
-                                "Username": "randomuser",<br>
-                                "FavoriteMovies": [<br>
-                                    "640c6890274958af87029bd7",<br>
-                                    "640c7209274958af87029bde",<br>
-                                    "640c72cf274958af87029bdf"<br>
-                                ]<br>
+                                {<br>
+                                    "Username": "Mary2",<br>
+                                    "Password": "$2b$10$Qzj0VgzghovcMDB1c7QyU.w39n2jAMH6rw6FRzZLeeX4WArti2OO2",<br>
+                                    "Email": "mary@example.com",<br>
+                                    "Birthday": "2001-10-24T00:00:00.000Z",<br>
+                                    "FavoriteMovies": [<br>
+                                    640c72cf274958af87029bdf<br>
+                                    ],<br>
+                                    "_id": "64130ea893504592c757550f",<br>
+                                    "__v": 0<br>
+                                }<br>
                             }<br>
                         </p>
                 <h3>READ</h3>
@@ -175,7 +189,7 @@
                             Authentication required: 'JWT Bearer Token'<br>
                             Format of the response data: 'JSON'<br>
                             <br>
-                            Example request URL endpoint: '/movies/genre/action'<br>
+                            Example request URL endpoint: '/movies/genre/Action'<br>
                             <br>
                             Example response:<br>
                             {
@@ -203,7 +217,7 @@
                             }
                         </p>
                 <h3>UPDATE</h3>
-                    <h4>Update user info by name</h4>
+                    <h4>Update user info by username</h4>
                         <p>
                             Description: This will allow the user to change their user information.<br>
                             Endpoint URL: '/users/:Username'<br>
@@ -228,7 +242,7 @@
                             {
                                 "_id": "641309dbd3d6abe814c76a1c",
                                 "Username": "UpdatedMary",
-                                "Password": "example456!",
+                                "Password": "$2b$10$Qzj0VgzghovcMDB1c7QyU.w39n2jAMH6rw6FRzZLeeX4WArti2OO2",
                                 "Email": "mary@example.com",
                                 "Birthday": "2001-10-24T00:00:00.000Z",
                                 "FavoriteMovies": [],
@@ -250,13 +264,17 @@
                             Example request URL endpoint: '/users/640c78738b910ed1587f7778/movies/640c72cf274958af87029bdf'<br>
                             <br>
                             Example response:<br>
-                            {
-                                "Username": "randomuser",
-                                "FavoriteMovies": [
-                                    "640c6890274958af87029bd7",
-                                    "640c7209274958af87029bde",
-                                ]
-                            }
+                            {<br>
+                                updatedUser: {<br>
+                                    "Username": "Mary2",<br>
+                                    "Password": "$2b$10$Qzj0VgzghovcMDB1c7QyU.w39n2jAMH6rw6FRzZLeeX4WArti2OO2",<br>
+                                    "Email": "mary@example.com",<br>
+                                    "Birthday": "2001-10-24T00:00:00.000Z",<br>
+                                    "FavoriteMovies": [],<br>
+                                    "_id": "64130ea893504592c757550f",<br>
+                                    "__v": 0<br>
+                                }<br>  
+                            }<br>
                         </p>
                 <h3>DELETE</h3>
                     <h4>Deregister from the site</h4>
