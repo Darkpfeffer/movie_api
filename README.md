@@ -17,6 +17,6 @@ To check Endpoints and CORS, please visit https://myflix-5sws.onrender.com/docs/
 * As a user, I want to be able to create a profile so I can save data about my favorite movies.
 
 ### Dependencies
-Please refer to package.json
+Please check in package.json
 
 ### Thank you for checking out my Movie_API
