@@ -16,6 +16,18 @@ To check Endpoints and CORS, please visit https://myflix-5sws.onrender.com/docs/
 - As a user, I want to be able to receive information on movies, directors, and genres so that I can learn more about movies I’ve watched or am interested in.
 * As a user, I want to be able to create a profile so I can save data about my favorite movies.
 
+### Tools used
+- Backend
+    *   Node.js
+        + Framework
+            + Express
+
+- Non-relational Database
+    * MongoDB (Atlas)
+    
+- Hosting
+    * Render
+
 ### Dependencies
 Please check in package.json
 
