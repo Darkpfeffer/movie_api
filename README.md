@@ -10,7 +10,7 @@ Users are able to register, log in, check the details of the movies, save movies
 
 The API is hosted at https://myflix-5sws.onrender.com
 
-To check Endpoints and CORS, please visit https://myflix-5sws.onrender.com/docs/global.html
+To check Endpoints and CORS, please visit https://myflix-5sws.onrender.com/docs/global.html or https://myflix-5sws.onrender.com/documentation.html
 
 ### User stories used to create project
 - As a user, I want to be able to receive information on movies, directors, and genres so that I can learn more about movies I’ve watched or am interested in.
