@@ -28,8 +28,8 @@ let generateJWTToken= (user) => {
  * 
  * Expected request body (JSON):
  * {
- *  Username: username (must be replaced with the username of the user)
- *  Password: password (must be replaced with the password of the user)
+ *  Username: String,
+ *  Password: String
  * }
  * - Response data: JSON
  *  - After login, user the 'token' in the HTML header 'Authentication: Bearer ${token}
@@ -40,6 +40,7 @@ let generateJWTToken= (user) => {
  * }
  * 
  * @example Response:
+ * {
  * "user": { "_id": "641309dbd3d6abe814c76a1c", "Username": "Mary", "Password": "$2b$10$Qzj0VgzghovcMDB1c7QyU.w39n2jAMH6rw6FRzZLeeX4WArti2OO2", "Email": "mary@example.com", "Birthday": "2001-10-24T00:00:00.000Z", "FavoriteMovies": [], "__v": 0 },
  * "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NDEzMDlkYmQzZDZhYmU4MTRjNzZhMWMiLCJVc2VybmFtZSI6Ik1hcnkiLCJQYXNzd29yZCI6ImV4YW1wbGU0NTYhIiwiRW1haWwiOiJtYXJ5QGV4YW1wbGUuY29tIiwiQmlydGhkYXkiOiIyMDAxLTEwLTI0VDAwOjAwOjAwLjAwMFoiLCJGYXZvcml0ZU1vdmllcyI6W10sIl9fdiI6MCwiaWF0IjoxNjc5NDc3OTYxLCJleHAiOjE2ODAwODI3NjEsInN1YiI6Ik1hcnkifQ.B82SgvK_MCxE3QENmiVU4E9YZpipc_uHkBUDDmH1hjQ"
  * }

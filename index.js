@@ -160,7 +160,7 @@ app.post('/users',
 });
 
 
-/** @function Add a movie to the users favorite list 
+/** @function Add a movie to the user's favorite list 
  * 
  * @summary
  *  - Endpoint URL: '/users/:userID/movies/:movieID'
@@ -412,7 +412,7 @@ app.put('/users/:Username', passport.authenticate('jwt', {session: false }), [
  *  @example Request URL endpoint: '/users/64130ea893504592c757550f/movies/640c72cf274958af87029bdf'
  * 
  * @example Response:
- *  '{ "updatedUser": { "Username": "Mary2", "Password": "$2b$10$Qzj0VgzghovcMDB1c7QyU.w39n2jAMH6rw6FRzZLeeX4WArti2OO2", "Email": "mary@example.com", "Birthday": "2001-10-24T00:00:00.000Z", "FavoriteMovies": [], "_id": "64130ea893504592c757550f"} }
+ *  { "updatedUser": { "Username": "Mary2", "Password": "$2b$10$Qzj0VgzghovcMDB1c7QyU.w39n2jAMH6rw6FRzZLeeX4WArti2OO2", "Email": "mary@example.com", "Birthday": "2001-10-24T00:00:00.000Z", "FavoriteMovies": [], "_id": "64130ea893504592c757550f"} }
 */
 app.put('/users/:userId/movies/:movieId', passport.authenticate('jwt', {session: false }), (req, res) => {
     const{ userId, movieId}= req.params;
